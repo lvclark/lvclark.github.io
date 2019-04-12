@@ -1,6 +1,6 @@
 ## Welcome
 
-I have set up this website for hosting training materials and documentation.
+This website is for hosting training materials and documentation.
 
 My personal website with publication list and other information can be found
 at <https://sites.google.com/site/lindsayvclarkgenetics/>.
