@@ -1,3 +1,1 @@
-## Publications
-
 Placeholder page

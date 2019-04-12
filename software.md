@@ -1,5 +1,3 @@
-## Software
-
 [polyRAD](https://github.com/lvclark/polyRAD): Genotype calling and imputation
 from sequencing data in polyploids and diploids
 
