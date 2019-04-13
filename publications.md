@@ -100,12 +100,14 @@ lignocellulosic biomass crops switchgrass, miscanthus, willow, and poplar."
 GCB Bioenergy, 11(1):118–151.
 [doi:10.1111/gcbb.12566](https://doi.org/doi:10.1111/gcbb.12566)
 
-Ji Hye Yoo, Eun Soo Seong, Bimal Kumar Ghimere, Kweon Heo, Xiaoli Jin,
-Toshihiko Yamada, Lindsay V. Clark, Erik J. Sacks, and Chang Yeon Yu (2018)
-"Establishment of *Miscanthus sinensis* with decreased lignin biosynthesis by
-*Agrobacterium*-mediated transformation using antisense COMT gene."
-Plant Cell, Tissue and Organ Culture 133(3):359-369.
-[doi:10.1007/s11240-018-1389-6](https://doi.org/10.1007/s11240-018-1389-6)
+Hongxu Dong, Lindsay V. Clark, Alexander E. Lipka, Joe E. Brummer,
+Katarzyna Głowacka, Megan C. Hall, Kweon Heo, Xiaoli Jin, Junhua Peng,
+Toshihiko Yamada, Bimal Kumar Ghimire, Ji Hye Yoo, Chang Yeon Yu, Hua Zhao,
+Stephen P. Long, and Erik J. Sacks (2019)
+"Winter hardiness of *Miscanthus* (III): Genome‐wide association and genomic
+prediction for overwintering ability in *Miscanthus sinensis*."
+GCB Bioenergy.
+[doi:10.1111/gcbb.12615](https://doi.org/10.1111/gcbb.12615)
 
 Hongxu Dong, Siyao Liu, Lindsay V. Clark, Shailendra Sharma, Justin M. Gifford,
 John A. Juvik, Alexander E. Lipka, and Erik J. Sacks (2019) "Winter hardiness of
@@ -118,6 +120,13 @@ John A. Juvik, Alex E. Lipka, and Erik J. Sacks (2018) "Genetic mapping of
 biomass yield in three interconnected *Miscanthus* populations."
 GCB Bioenergy 10(3): 165-185.
 [doi:10.1111/gcbb.12472](https://doi.org/10.1111/gcbb.12472)
+
+Ji Hye Yoo, Eun Soo Seong, Bimal Kumar Ghimere, Kweon Heo, Xiaoli Jin,
+Toshihiko Yamada, Lindsay V. Clark, Erik J. Sacks, and Chang Yeon Yu (2018)
+"Establishment of *Miscanthus sinensis* with decreased lignin biosynthesis by
+*Agrobacterium*-mediated transformation using antisense COMT gene."
+Plant Cell, Tissue and Organ Culture 133(3):359-369.
+[doi:10.1007/s11240-018-1389-6](https://doi.org/10.1007/s11240-018-1389-6)
 
 Siyao Liu, Lindsay V. Clark, Kankshita Swaminathan, Justin M. Gifford,
 John A. Juvik, Erik J. Sacks (2016) "High density genetic map of
