@@ -1,7 +1,8 @@
 ---
-layout: page-aside
+layout: page
 titles:
   en: Publications
+aside: !!map
 toc: true
 ---
 
