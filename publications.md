@@ -2,8 +2,8 @@
 layout: page
 titles:
   en: Publications
-aside: !!map
-toc: true
+aside:
+  toc: true
 ---
 
 ## Publications
