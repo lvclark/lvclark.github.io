@@ -1,15 +1,9 @@
 ---
 layout: page
-titles:
-  en: Genotype calling in a tetraploid diversity panel with polyRAD
+title: Genotype calling in a tetraploid diversity panel with polyRAD
 aside:
   toc: true
 ---
-
-Genotype calling in a tetraploid diversity panel with polyRAD
-================
-Lindsay Clark
-April 15, 2019
 
 Packages for this tutorial
 --------------------------
