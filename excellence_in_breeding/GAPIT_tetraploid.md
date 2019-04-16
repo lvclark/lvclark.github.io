@@ -1,15 +1,9 @@
 ---
 layout: page
-titles:
-  en: GWAS on tetraploid genotypes using GAPIT
+title: GWAS on tetraploid genotypes using GAPIT
 aside:
   toc: true
 ---
-
-GWAS on tetraploid genotypes using GAPIT
-================
-Lindsay Clark
-April 16, 2019
 
 Packages needed to run GAPIT
 ----------------------------

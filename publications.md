@@ -1,12 +1,9 @@
 ---
 layout: page
-titles:
-  en: Publications
+title: Publications
 aside:
   toc: true
 ---
-
-## Publications
 
 ### Bioinformatics
 
