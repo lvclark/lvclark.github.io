@@ -1,0 +1,188 @@
+---
+title: "GWAS on tetraploid genotypes using GAPIT"
+author: "Lindsay Clark"
+date: "April 16, 2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Packages needed to run GAPIT
+
+Install the following packages if you don't have them already.
+
+```{r eval = FALSE}
+install.packages(c("gplots", "LDheatmap", "genetics", "ape", "EMMREML",
+                   "scatterplot3d", "BiocManager", "ggplot2", "viridis"))
+BiocManager::install("multtest")
+```
+
+Now we will load all of the packages as described in the
+[GAPIT manual](http://zzlab.net/GAPIT/gapit_help_document.pdf).
+
+```{r message = FALSE, warning = FALSE}
+library(multtest)
+library(gplots)
+library(LDheatmap)
+library(genetics)
+library(ape)
+library(EMMREML)
+library(compiler) #this library is already installed in R
+library(scatterplot3d)
+```
+
+And more for our own visualizations.
+
+```{r message = FALSE, warning = FALSE}
+library(ggplot2)
+library(viridis)
+```
+
+And finally load the source code with the GAPIT and EMMA functions.
+
+```{r}
+source("http://zzlab.net/GAPIT/gapit_functions.txt")
+source("http://zzlab.net/GAPIT/emma.txt")
+```
+
+## Data for this tutorial
+
+Here we load the GAPIT files that were exported from polyRAD, containing
+posterior mean genotypes.  See the
+[previous tutorial](polyRAD_diversity_panel.html) to understand how these
+were generated.
+
+```{r cache = TRUE}
+myGD <- read.csv("Msa_tetraploids_Chr05_GD.csv", stringsAsFactors = FALSE)
+myGM <- read.csv("Msa_tetraploids_Chr05_GM.csv", stringsAsFactors = FALSE)
+
+myGD[1:10,1:4]
+head(myGM)
+```
+
+Next we will import some phenotypic data.  The taxa are listed in the same
+order that they are in for the genotype file.
+
+```{r}
+myY <- read.csv("Msa_tetraploids_pheno.csv", stringsAsFactors = FALSE)
+```
+
+The phenotypes file contains least-squared means, Box-Cox transformed, for
+stem diameter.
+
+```{r}
+hist(myY$Stem_diameter)
+sum(is.na(myY$Stem_diameter))
+```
+
+## Impact of population structure on the phenotype
+
+GAPIT will perform a PCA, but we can also do the PCA ourselves to
+evaluate to what degree the phenotype is associated with population
+structure.
+
+```{r cache = TRUE}
+mypca <- prcomp(as.matrix(myGD[,-1]), scale. = TRUE)
+```
+
+We can plot the marker variance explained by each axis to get a sense
+of how many axes are biologically meaningful.
+
+```{r}
+plot(mypca$sdev[1:50] ^ 2)
+```
+
+It looks like the first nine should suffice.  Now we can see whether their
+association with the phenotype is significant.
+
+```{r}
+pca_model <- lm(myY$Stem_diameter ~ mypca$x[,1:9])
+summary(pca_model)
+```
+
+Based on this, we want to use the first four PCs as covariates in GWAS.
+We can put them into a data frame.
+
+```{r}
+myCV <- data.frame(Taxa = myY$Taxa,
+                   PC1 = mypca$x[,1],
+                   PC2 = mypca$x[,2],
+                   PC3 = mypca$x[,3],
+                   PC4 = mypca$x[,4])
+```
+
+We can also visualize how the axes are associated with the phenotype.
+
+```{r}
+gp <- ggplot(myCV, aes(col = myY$Stem_diameter)) +
+  scale_color_viridis()
+gp + geom_point(aes(x = PC1, y = PC2))
+gp + geom_point(aes(x = PC3, y = PC4))
+```
+
+## Running GAPIT
+
+GAPIT generates a lot of output files, so we will want to put them in a
+separate folder.  Make a folder called `GAPIT_output` and then change your
+working directory to that one.  Then we can run GAPIT.
+
+```{r eval = FALSE}
+setwd("GAPIT_output")
+my_gapit <- GAPIT(Y = myY, GD = myGD, GM = myGM, CV = myCV)
+setwd("..")
+```
+
+## Evaluating the results
+
+Many files were output from GAPIT.  If you open one of the manhattan plots, as well as
+the QQ plot, you should see that there was one highly significant marker.
+We can import the results table to find out which it was.
+
+```{r}
+gwas_results <- read.csv("GAPIT_output/GAPIT.MLM.DBI.year3.BC.GWAS.Results.csv",
+                         stringsAsFactors = FALSE)
+head(gwas_results)
+
+gwas_results[gwas_results$FDR_Adjusted_P.values < 0.05, ]
+```
+
+What was the relationship between this allele and the phenotype?  We will
+multiply the genotype by two so that it scales from zero to four rather than
+zero to two, which will make it more intuitive in terms of allele copy number.
+
+```{r warning = FALSE}
+gp2 <- ggplot(mapping = aes(x = myGD$S05_13267268_AAA * 2,
+                            y = myY$Stem_diameter)) +
+  scale_color_viridis() +
+  xlab("Allele copy number of AAA at S05_13267268") +
+  ylab("Stem diameter")
+gp2 + geom_point(aes(col = myCV$PC1)) + labs(col = "PC1")
+```
+
+We can see the three populations more or less by three color groups.
+Within each population, there seems to be a negative relationship between
+number of copies of this allele and stem diameter.
+
+This visualization is helpful for understanding posterior mean genotypes and
+how they can be useful.  The individuals clustered around zero on the x-axis
+probably have zero copies of the allele.  At 0.5 on the x-axis, individuals
+have about a 50% chance of having one copy of the allele and a 50% chance of
+having zero copies.  Since some of those individuals will have the allele and
+some won't, for the sake of linear regression it makes sense to have them
+positioned intermediate between zero and one.
+
+Also notice that the three populations differ in terms of their median
+genotype value, even though the median is always less than 0.5 (*i.e*
+probably having zero copies).  The allele is most common in the
+yellow/yellow-green population.  Therefore, at low read depth, even
+if there were no reads for the allele, there is some probability that
+the individual has the allele, and that probability is higher than
+it is for the other populations.  Likewise, the allele is rarest in
+the purple population, hence why the median genotype value for that
+population is much closer to zero.
+
+If you have time, you can go back to the `RADdata` object for this marker
+and see how allelic read depth and genotype prior probabilities led to
+these posterior mean genotypes.

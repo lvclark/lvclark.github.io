@@ -1,0 +1,282 @@
+---
+title: "Using polyRAD for genotype calling in a sweetpotato F1 population"
+author: "Lindsay Clark"
+date: "April 8, 2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Packages for this tutorial
+
+If you don't have `VariantAnnotation`, `polyRAD`, `qqman`, and `pcaMethods` 
+installed on your computer already, get them by running the following code:
+
+```{r eval = FALSE}
+install.packages("BiocManager")
+BiocManager::install("VariantAnnotation")
+BiocManager::install("pcaMethods")
+install.packages("polyRAD")
+install.packages("qqman")
+```
+
+Now load them into your workspace by running:
+
+```{r message = FALSE, warning = FALSE}
+library(VariantAnnotation)
+library(polyRAD)
+library(qqman)
+library(pcaMethods)
+```
+
+## Compressing and inspecting a VCF
+
+PolyRAD takes advantage of the tools available for working with VCF files from
+the Bioconductor package 
+[VariantAnnotation](http://bioconductor.org/packages/release/bioc/html/VariantAnnotation.html).
+It is easiest to use those tools if the VCF is compressed using `bgzip` and
+indexed.  This only needs to be done once, and then the files are saved on your
+computer.
+
+```{r}
+my_vcf_file <- "three_chs_swetpotato.vcf"
+```
+```{r eval = FALSE}
+my_vcf_bg <- bgzip(my_vcf_file)
+indexTabix(my_vcf_bg, format = "vcf")
+```
+```{r echo = FALSE}
+my_vcf_bg <- paste(my_vcf_file, ".bgz", sep = "")
+```
+
+We can read the file header to get an idea of what data are in the file.
+
+```{r}
+my_header <- scanVcfHeader(my_vcf_bg)
+my_header
+samples(my_header)[1:50]
+info(my_header)
+geno(my_header)
+```
+
+## Importing the VCF into polyRAD
+
+Now we'll read the VCF into polyRAD.  We'll change a few parameters from their
+defaults.  `min.ind.with.reads` and `min.ind.with.minor.allele` are used for 
+filtering and should take the population size and design into account.  We have
+263 samples, so if we want a maximum of 10% missing data (fairly stringent for 
+GBS datasets) we will set `min.ind.with.reads = 237`.  Since this is an F1 
+population, any real allele should be found in ~50% of individuals.  Let's 
+relax that to 30% and set `min.ind.with.minor.allele = 71`.  We will also set
+`possiblePloidies = list(6)` since we want to treat everything as autohexaploid.
+Since this is a small example dataset and we know there are only 6000 SNPs, we
+can also save computer memory by reducing `expectedAlleles` and `expectedLoci`.
+
+```{r}
+my_RAD <- VCF2RADdata(my_vcf_bg, min.ind.with.reads = 237, 
+                      min.ind.with.minor.allele = 71, 
+                      possiblePloidies = list(6),
+                      expectedAlleles = 12000, expectedLoci = 6000)
+my_RAD
+```
+
+About 1000 SNPs did not pass the filtering criteria, then another ~850 were 
+close enough to each other to be merged into haplotypes.  Lastly, ~60 were
+dropped because no individual allele was common enough to pass the filtering
+threshold.
+
+## Inspecting the `RADdata` object
+
+We can take a look at the alignment information for our markers.
+
+```{r}
+my_RAD$locTable[1:20,]
+```
+
+We can also inspect allele names, and see some markers where SNPs were grouped
+into haplotypes.
+
+```{r}
+GetAlleleNames(my_RAD)[1:50]
+```
+
+Now we see why markers Swp_12_0002 and 3 are missing; they were merged into 
+Swp_12_0001.
+
+Let's get a quick PCA plot based on allelic read depth, before we do any 
+genotype calling.  This will let us confirm that the duplicate parents are 
+really duplicates, and that all the progeny appear to be F1s.  First we'll 
+make a vector of colors to label parents and progeny.
+
+```{r}
+my_col <- rep("black", nTaxa(my_RAD))
+names(my_col) <- GetTaxa(my_RAD)
+my_col[grep("^P1", GetTaxa(my_RAD))] <- "blue"
+my_col[grep("^P2", GetTaxa(my_RAD))] <- "red"
+my_col[1:30]
+```
+
+Then we can make the plot.
+
+```{r}
+plot(my_RAD, col = my_col)
+```
+
+This looks perfect.  We don't need to remove any samples. (If we did, the 
+`SubsetByTaxon` function would be helpful.)  We can also merge read depth
+across parental duplicates.
+
+```{r}
+my_RAD <- MergeTaxaDepth(my_RAD, paste("P1", 1:7, sep = "_"))
+my_RAD <- MergeTaxaDepth(my_RAD, paste("P2", 1:6, sep = "_"))
+GetTaxa(my_RAD)[1:20]
+```
+
+For genotype calling, we will need to indicate which samples are the 
+parents.  Since there was no backcrossing, it does not matter which is listed
+as "donor" and which as "recurrent".
+
+```{r}
+my_RAD <- SetDonorParent(my_RAD, "P1_1")
+my_RAD <- SetRecurrentParent(my_RAD, "P2_1")
+```
+
+We can do another quick PCA to see how it looks now.  Since there is only one
+sample of each parent, the first axis no longer distinguishes parents and
+progeny.
+
+```{r}
+plot(my_RAD)
+```
+
+## Testing overdispersion
+
+Because sequencing data are noisy, read depth ratios might deviate from the
+underlying allele dosage ratios more than we would expect.  We can perform
+preliminary genotype calling, then test for this overdispersion.  (I'm using
+`sample` to reduce the amount of time it takes to generate the plot, by only
+using a random subset of p-values.)
+
+```{r cache = TRUE}
+my_RAD_pre <- PipelineMapping2Parents(my_RAD, freqAllowedDeviation = 0.035,
+                                      useLinkage = FALSE)
+testOD <- TestOverdispersion(my_RAD_pre)
+qq(sample(testOD[["10"]], 5000))
+qq(sample(testOD[["12"]], 5000))
+qq(sample(testOD[["14"]], 5000))
+```
+
+We want as many points as possible to follow the red line in the lower left,
+so we will go forward with 12 as our value.
+
+## Genotype calling
+
+We will perform genotype calling using expected genotype frequencies in an F1
+population as priors.  This time, we will adjust our overdispersion parameter,
+and also add linkage to the model.
+
+```{r cache = TRUE}
+my_RAD <- PipelineMapping2Parents(my_RAD, freqAllowedDeviation = 0.035,
+                                  useLinkage = TRUE, overdispersion = 12)
+```
+
+If polyRAD was not able to determine the inheritance pattern, the posterior
+probabilities will be filled with `NA`s.  Additionally, if both parents 
+were scored as homozygous, the progeny will be non-variable and the marker
+will not be particularly useful.  We can identify and remove such markers.
+
+```{r}
+my_RAD_sub <- RemoveUngenotypedLoci(my_RAD, 
+                                    removeNonvariant = TRUE)
+my_RAD_sub
+```
+
+Here we retain 2347 loci.  We will use that subset for further analysis.
+
+## Genotype export
+
+We can produce a matrix of the most probable genotypes.
+
+```{r}
+out_geno <- GetProbableGenotypes(my_RAD_sub, naIfZeroReads = TRUE)$genotypes
+out_geno[1:20,1:7]
+```
+
+A PCA can confirm that the relatedness among individuals still looks right.
+
+```{r}
+my_pca <- pca(out_geno, method = "ppca")
+plot(scores(my_pca)[,1], scores(my_pca)[,2],
+     col = c("blue", "red", rep("black", nrow(out_geno) - 2)))
+```
+
+Now that genotypes have been called, we see progeny as being mostly between
+the two parents on the first axis.
+
+We can also see the posterior mean genotypes
+
+```{r}
+out_postmean <- GetWeightedMeanGenotypes(my_RAD_sub, minval = 0, maxval = 6)
+out_postmean[1:20, 1:7]
+```
+
+Some of these don't match the expected segregation ratio, and upon inspection
+of read depths, we see that the depth ratios don't meet expectations for a 
+hexaploid.
+
+```{r}
+my_RAD_sub$alleleDepth[1:20,9:14]
+```
+
+We can save the RADdata object, and also export to MAPpoly.
+
+```{r eval = FALSE}
+save(my_RAD_sub, file = "sweetpotato_F1_RADdata.RData")
+Export_MAPpoly(my_RAD_sub, file = "sweetpotato_F1_polyRAD_MAPpoly.txt")
+```
+
+## Comparison to SuperMASSA results
+
+```{r}
+load("supermassa_result.rda")
+dat.swp$geno.dose[1:10,1:10]
+```
+
+We'll calculate the posterior mean genotypes from the SuperMASSA results to
+compare to those from polyRAD.
+
+```{r}
+prob_supermassa <- as.matrix(dat.swp$geno[,-(1:2)])
+wm_vect <- rowSums(sweep(prob_supermassa, 2, 0:6, "*"))
+postmean_supermassa <- matrix(0, nrow = dat.swp$n.ind, ncol = dat.swp$n.mrk,
+                            dimnames = list(dat.swp$ind.names, dat.swp$mrk.names))
+for(i in 1:nrow(dat.swp$geno)){
+  ind <- dat.swp$geno$ind[i]
+  mrk <- dat.swp$geno$mrk[i]
+  postmean_supermassa[ind, mrk] <- wm_vect[i]
+}
+```
+
+We'll get correlations between posterior mean genotypes from SuperMASSA and
+posterior mean genotypes from polyRAD.
+
+```{r warning = FALSE}
+common_loc <- GetLoci(my_RAD_sub)[GetLoci(my_RAD_sub) %in% dat.swp$mrk.names]
+my_corr <- rep(NA_real_, length(common_loc))
+names(my_corr) <- common_loc
+
+for(mrk in common_loc){
+  polyRAD_match <- grep(mrk, colnames(out_postmean))
+  if(length(polyRAD_match) > 1) next
+  geno1 <- postmean_supermassa[,mrk]
+  geno2 <- out_postmean[dat.swp$ind.names, polyRAD_match]
+  my_corr[mrk] <- cor(geno1, geno2, use = "pairwise.complete.obs")
+}
+
+hist(my_corr)
+median(my_corr, na.rm = TRUE)
+```
+
+Most, but not all, markers have moderately high correlation between the two methods.
