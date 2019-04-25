@@ -15,4 +15,4 @@ Datasets for tutorials are available at
 * Genotype calling with polyRAD in a *Miscanthus* diversity panel -- [Tutorial on web](excellence_in_breeding/polyRAD_diversity_panel.html) -- [Download R markdown](excellence_in_breeding/polyRAD_diversity_panel.Rmd)
 * Running GAPIT with posterior mean genotypes -- [Tutorial on web](excellence_in_breeding/GAPIT_tetraploid.html) -- [Download R markdown](excellence_in_breeding/GAPIT_tetraploid.Rmd)
 * [Software Carpentry lesson](https://swc-uiuc.github.io/2019-05-10-cip/)
-* Calling variants without a reference genome using GBS-SNP-CROP -- [Tutorial on web](excellence_in_breeding/calling_without_reference.html) -- [Download markdown](excellence_in_breeding/calling_without_reference.md)
+* Calling variants without a reference genome using GBS-SNP-CROP -- [Tutorial on web](excellence_in_breeding/calling_without_reference.html) -- [Download markdown](https://raw.githubusercontent.com/lvclark/lvclark.github.io/master/excellence_in_breeding/calling_without_reference.md)
