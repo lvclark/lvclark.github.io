@@ -138,7 +138,7 @@ We can use `less` to inspect them.
 less Msa.MR.Genome.fa
 ```
 
-![Beginning of Msa.MR.Genome.fa](calling_without_reference_images/Msa_MR_Genome_fa.png)
+![Beginning of Msa.MR.Genome.fa](/calling_without_reference_images/Msa_MR_Genome_fa.png)
 
 `Msa.MR.Genome.fa` is what will be used as the reference genome when we align to Msa.
 It contains all of the tag clusters separated using strings of `A` for spacers.
@@ -147,7 +147,7 @@ It contains all of the tag clusters separated using strings of `A` for spacers.
 less Msa.MR.Clusters.fa
 ```
 
-![Beginning of Msa.MR.Clusters.fa](calling_without_reference_images/Msa_MR_Clusters_fa.png)
+![Beginning of Msa.MR.Clusters.fa](/calling_without_reference_images/Msa_MR_Clusters_fa.png)
 
 `Msa.MR.Clusters.fa` isn't strictly needed for GBS-SNP-CROP, but is there in case
 downstream software requires a reference genome.
@@ -156,7 +156,7 @@ downstream software requires a reference genome.
 less PosToMask.txt
 ```
 
-![Beginning of PosToMask.txt](calling_without_reference_images/PosToMask.png)
+![Beginning of PosToMask.txt](/calling_without_reference_images/PosToMask.png)
 
 `PosToMask.txt` contains positions of all spacer nucleotides in `Msa.MR.Genome.fa`.
 
@@ -181,7 +181,7 @@ The most important output from this script is the set of files ending in
 `.mpileup`, which contain information about how reads from each sample correspond
 to alleles and loci.
 
-![Mpileup output for JM-2014-H-28](calling_without_reference_images/mpileup.png)
+![Mpileup output for JM-2014-H-28](/calling_without_reference_images/mpileup.png)
 
 At position 1 in the mock reference, where the reference base is a T, there were
 8000 reads that aligned for JM-2014-H-28.  The rest of the information is not
@@ -200,16 +200,16 @@ module load Perl
 perl GBS-SNP-CROP-6.pl -b Msa_barcodes.txt -out Msa.MasterMatrix.txt -p snp -t 4
 ```
 
-![Count output for JM-2014-H-28](calling_without_reference_images/count.png)
+![Count output for JM-2014-H-28](/calling_without_reference_images/count.png)
 
 Here we see how many reads corresponded to A, C, G, and T at each position.
 Scrolling through the file we can see how depth varied from tag to tag.
 
-![Count output for JM-2014-H-28](calling_without_reference_images/count2.png)
+![Count output for JM-2014-H-28](/calling_without_reference_images/count2.png)
 
 Additionally, one file was created combining this information from all samples.
 
-![Master matrix of counts](calling_without_reference_images/mastermatrix.png)
+![Master matrix of counts](/calling_without_reference_images/mastermatrix.png)
 
 ## Filtering markers
 
@@ -260,12 +260,12 @@ perl GBS-SNP-CROP-7.pl -in Msa.MasterMatrix.txt -out Msa.GenoMatrix.txt -p snp -
 
 We can see a log of what happened, showing that we got almost 38K SNPs.
 
-![Log from step 7](calling_without_reference_images/genomat_log.png)
+![Log from step 7](/calling_without_reference_images/genomat_log.png)
 
 This is what the output genotype matrix looks like.  It contains genotype calls
 and allelic read depth.
 
-![Genotype matrix](calling_without_reference_images/GenoMatrix.png)
+![Genotype matrix](/calling_without_reference_images/GenoMatrix.png)
 
 ## Exporting to VCF
 
@@ -279,6 +279,6 @@ module load Perl
 perl GBS-SNP-CROP-8.pl -in variants/Msa.GenoMatrix.txt -out Msa_GSCdemo -b Msa_barcodes.txt -formats vcf
 ```
 
-![Genotypes as VCF](calling_without_reference_images/vcf_output.png)
+![Genotypes as VCF](/calling_without_reference_images/vcf_output.png)
 
 This is the file that we will keep and use for further analysis with other software.
