@@ -1,0 +1,382 @@
+---
+title: "Exploring and Filtering VCF files"
+author: "Lindsay Clark"
+date: "April 25, 2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Packages for this tutorial
+
+We will use the `VariantAnnotation` package from
+[Bioconductor](http://bioconductor.org/packages/release/bioc/html/VariantAnnotation.html)
+to read and filter VCFs.  We will also use `ape` to do a phylogenetic tree.
+If you don't have these packages already, install them like so:
+
+```{r eval = FALSE}
+install.packages("BiocManager", "ape")
+BiocManager::install("VariantAnnotation")
+```
+
+Then load them.
+
+```{r warning = FALSE, message = FALSE}
+library(VariantAnnotation)
+library(ape)
+```
+
+## Data for this tutorial
+
+We will use the VCF that was generated during the GBS-SNP-CROP
+[tutorial](calling_without_reference.html), which we named `Msa_GSCdemo.vcf`.
+It contains data for about 38K markers on eight tetraploid individuals of
+*Miscanthus sacchariflorus*.
+
+It is generally easier to work with VCFs in `VariantAnnotation` if they have
+been zipped and indexed, so we'll do that first.
+
+```{r eval = FALSE}
+mybg <- bgzip("Msa_GSCdemo.vcf")
+indexTabix(mybg, format = "vcf")
+```
+```{r echo = FALSE}
+mybg <- "Msa_GSCdemo.vcf.bgz"
+```
+
+We can take a look at some information from the file header.
+
+```{r}
+hdr <- scanVcfHeader(mybg)
+hdr
+samples(hdr)
+meta(hdr)$source
+geno(hdr)
+```
+
+And confirm this matches the text in the file.
+
+```{r}
+cat(readLines(mybg, 20), sep = "\n")
+```
+
+## Making a prefilter
+
+I know that *Miscanthus* has a whole genome duplication (even before the
+autotetraploidy in these *M. sacchariflorus* accessions) and so even with the
+paralog filtering that was performed by GBS-SNP-CROP, I'm suspicious that some
+paralogs made it through.  Of those first few markers that I printed out,
+I can see that most of them are heterozygous for all individuals.  Those
+markers are probably merged paralogs, and definitely not informative, so I
+would like to get rid of them.
+
+One option from `VariantAnnotation` is to make a *prefilter*.  This is a
+function that treats each line of the VCF genotype table as a text string, and
+returns `TRUE` or `FALSE` incidating whether or not that line should pass the
+filter.  One very handy function for building prefilter functions is `grepl`,
+since it searches for a particular string or pattern, and returns `TRUE` if it
+finds it and `FALSE` otherwise.  Another handy function is
+`gregexpr` if you want to know how many times you find a particular pattern
+in each line.
+
+If all eight samples are either heterozygous or missing, I want to discard the
+marker.  In the sense of the file format, this means that the `GT` field for
+every sample is either `0/1` or `./.`.  Another way of looking at it is that
+there would be no homozygotes, *i.e.* no `0/0` and no `1/1`.  Here's a function
+to perform that check.
+
+```{r}
+NotAllHet <- function(lines){
+  found00 <- grepl("0/0:", lines)
+  found11 <- grepl("1/1:", lines)
+  return(found00 | found11)
+}
+```
+
+We can test it with the first few lines of the file, ignoring the header lines.
+
+```{r}
+mylines <- readLines(mybg, 30)
+# skip header lines starting with "#"
+mylines <- mylines[!grepl("^#", mylines)]
+
+keepem <- NotAllHet(mylines)
+cat(mylines[keepem], sep = "\n")
+cat(mylines[!keepem], sep = "\n")
+```
+
+Here is how I would apply that filter to my VCF file, exporting a filtered
+VCF.
+
+```{r}
+filter1_file <- "Msa_GBSdemo_filter1.vcf"
+```
+```{r eval = FALSE}
+filterVcf(mybg, genome = "MsaMockReference",
+          destination = filter1_file,
+          prefilters = FilterRules(list(NotAllHet)))
+```
+
+And I can confirm that it looks filtered.
+
+```{r}
+cat(readLines(filter1_file, 20), sep = "\n")
+```
+
+Then zip and index it.
+
+```{r eval = FALSE}
+filter1_bg <- bgzip(filter1_file)
+indexTabix(filter1_bg, format = "vcf")
+```
+```{r echo = FALSE}
+filter1_bg <- paste(filter1_file, ".bgz", sep = "")
+```
+
+## Importing data from a VCF
+
+This is a pretty small VCF, so let's first explore what happens when we
+import the whole thing.
+
+```{r}
+all_my_data <- readVcf(filter1_bg)
+all_my_data
+```
+
+We kept 29K markers (pretty good given how heavily filtered the first few
+lines were).  We also see a bunch of slots in the VCF object that we
+can explore.
+
+We can get to the header, with the same data we found using `scanVcfHeader`
+on the file.
+
+```{r}
+header(all_my_data)
+```
+
+Here's the data from the leftmost columns of the genotype table.  This is a
+`GRanges` object, which is a special kind of table used in Bioconductor for
+representing genomic coordinates.
+
+```{r}
+rowRanges(all_my_data)
+```
+
+The INFO column from the VCF also got unpacked into its own table.
+
+```{r}
+info(all_my_data)
+```
+
+We can get the definitions of those columns from the header.
+
+```{r}
+info(header(all_my_data))
+```
+
+Last but certainly not least, there are the data from the genotypes table.
+This includes strings representing the genotypes (`GT`) and allelic read
+depths (`AD`).
+
+```{r}
+geno(all_my_data)$GT[1:10,]
+geno(all_my_data)$AD[1:10,]
+geno(all_my_data)$AD[[1,1]]
+```
+
+This is about the stage where I'd like to do a sanity check to confirm that
+my samples show the pattern of relatedness that I'm expecting.  I will
+convert the diploidized genotypes to numbers and make a neighbor-joining tree.
+
+```{r}
+numgen <- matrix(NA_integer_, nrow = dim(all_my_data)[1],
+                 ncol = dim(all_my_data)[2],
+                 dimnames = dimnames(geno(all_my_data)$GT))
+numgen[geno(all_my_data)$GT == "0/0"] <- 0L
+numgen[geno(all_my_data)$GT == "0/1"] <- 1L
+numgen[geno(all_my_data)$GT == "1/1"] <- 2L
+
+mydist <- dist(t(numgen))
+mynj <- nj(mydist)
+plot(mynj, type = "unrooted")
+```
+
+We can see a clustering of Japan vs. the mainland, and northern vs. southern
+Japan, as expected.
+
+## Making a filter
+
+Before, we did prefiltering based on text processing alone.  However, we can
+also make functions to filter the data after it has been imported to R.
+
+We had some rough cutoffs for depth using GBS-SNP-CROP, but we can narrow
+those further.  What is the distribution of total depth among markers in the
+dataset?
+
+```{r}
+hist(info(all_my_data)$DP)
+hist(log(info(all_my_data)$DP))
+```
+
+How about we say we want markers with a total depth below 1000.
+We can make a filter function for that.
+
+```{r}
+DPbelow1000 <- function(vcf){
+  return(info(vcf)$DP < 1000)
+}
+
+mean(DPbelow1000(all_my_data))
+```
+
+94.8% of markers would pass that threshold.
+
+We also allowed 25% missing data when we ran GBS-SNP-CROP. We can see that
+when we look at `NS`, the number of samples with data.
+
+```{r}
+table(info(all_my_data)$NS)
+```
+
+Or perhaps it was <25% missing data.  If we wanted no missing data at all,
+we could make a filter function.
+
+```{r}
+NoMissing <- function(vcf){
+  return(info(vcf)$NS == 8)
+}
+
+mean(NoMissing(all_my_data))
+```
+
+Then we could use both of those functions as filters.  We could even combine them
+with the prefilter we made before.
+
+```{r}
+filter2_file <- "Msa_GBSdemo_filter2.vcf"
+```
+```{r eval = FALSE}
+filterVcf(mybg, genome = "MsaMockReference",
+          destination = filter2_file,
+          prefilters = FilterRules(list(NotAllHet)),
+          filters = FilterRules(list(DPbelow1000, NoMissing)))
+```
+
+## Working with big VCFs
+
+That's all well and good for this little 5 Mb VCF, where we could import the 
+whole thing and explore it before deciding how we wanted to filter it.  What
+about a 50 Gb VCF?
+
+In `VariantAnnotation`, we can create a `TabixFile` object, which contains a
+pointer to the VCF file that we're working with.  When we do that, we can
+set `yieldSize` to indicate how many SNPs to import at once.  This `TabixFile`
+object is a type of *file connection*.
+
+```{r}
+mycon <- TabixFile(mybg, yieldSize = 1000)
+```
+
+We open the connection to read from the beginning of the file.
+
+```{r}
+open(mycon)
+```
+
+Then when we run `readVcf`, we will only get the first 1000 SNPs.
+
+```{r}
+first1000 <- readVcf(mycon)
+first1000
+```
+
+If we read again, we would get the next 1000.  Here I am assigning it to
+another object, but depending on what you are doing, this is a great
+opportunity to use a loop.
+
+```{r}
+next1000 <- readVcf(mycon)
+next1000
+```
+
+Compare to see that they are really different.
+
+```{r}
+rowRanges(first1000)
+rowRanges(next1000)
+```
+
+When you are all done reading, close the connection.
+
+```{r}
+close(mycon)
+```
+
+## Keeping only specific fields or genomic regions
+
+So far we have read all of the information from the VCF, even though there
+are some fields that we haven't looked at at all.  The `ScanVcfParam`
+function is really useful if we want to save memory by only importing
+fields that we want.
+
+For fixed fields, let's ignore `QUAL` and `FILTER` since GBS-SNP-CROP didn't put
+useful information there.  We plan to re-call the genotypes as tetraploid, so
+we can also drop the diploidized genotypes in the `GT` field.  And in the `INFO`
+column, maybe we only care about `DP` and `NS`.
+
+```{r}
+myparam <- ScanVcfParam(fixed = "ALT", info = c("DP", "NS"), geno = "AD")
+
+open(mycon)
+first1000slim <- readVcf(mycon, param = myparam)
+close(mycon)
+
+first1000slim
+rowRanges(first1000slim)
+```
+
+`ScanVcfParam` can also be used to subset samples.
+
+```{r}
+myparam2 <- ScanVcfParam(fixed = "ALT", info = c("DP", "NS"), geno = "AD",
+                         samples = c("JM-2014-H-28", "JM-2014-K-8", "JM-2014-M-5", "JM-2014-S-5"))
+
+open(mycon)
+first1000slim2 <- readVcf(mycon, param = myparam2)
+close(mycon)
+
+first1000slim2
+geno(first1000slim2)$AD[1:10,]
+```
+
+A third handy use for `ScanVcfParam` is specifying a genomic region with the `which`
+parameter.  The one catch is that you can't use it with `TabixFile`s that have a
+`yieldSize` other than `NA`.  Here is how I would read from 10000 to 11000 bp on
+MockRefGenome, assuming it were a real chromosome.
+
+```{r}
+myparam3 <- ScanVcfParam(which = GRanges("MockRefGenome", IRanges(10000, 11000)))
+
+specific_range <- readVcf(mybg, genome = "MockRefGenome", param = myparam3)
+
+rowRanges(specific_range)
+```
+
+`ScanVcfParam` is not only useful for importing data, but also filtering.
+
+```{r}
+filter3_file <- "Msa_GBSdemo_filter3.vcf"
+```
+```{r eval = FALSE}
+filterVcf(mybg, genome = "MsaMockReference",
+          destination = filter3_file,
+          prefilters = FilterRules(list(NotAllHet)),
+          filters = FilterRules(list(DPbelow1000, NoMissing)),
+          param = myparam2)
+```
+```{r}
+cat(readLines(filter3_file, 20), sep = "\n")
+```
+
