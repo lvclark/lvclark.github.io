@@ -8,7 +8,7 @@ aside:
 Packages for this tutorial
 --------------------------
 
-We will use the `VariantAnnotation` package from [Bioconductor](http://bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) to read and filter VCFs. We will also use `ape` to do a phylogenetic tree. If you don't have these packages already, install them like so:
+We will use the `VariantAnnotation` package from [Bioconductor](http://bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) to read and filter VCFs. We will also use `ape` to make a phylogenetic tree. If you don't have these packages already, install them like so:
 
 ``` r
 install.packages("BiocManager", "ape")
@@ -41,7 +41,7 @@ hdr <- scanVcfHeader(mybg)
 hdr
 ```
 
-    ## class: VCFHeader 
+    ## class: VCFHeader
     ## samples(8): JM-2014-H-28 JM-2014-K-8 ... KMS257 RU2012-055
     ## meta(4): fileDate fileformat phasing source
     ## fixed(0):
@@ -52,7 +52,7 @@ hdr
 samples(hdr)
 ```
 
-    ## [1] "JM-2014-H-28" "JM-2014-K-8"  "JM-2014-M-5"  "JM-2014-S-5" 
+    ## [1] "JM-2014-H-28" "JM-2014-K-8"  "JM-2014-M-5"  "JM-2014-S-5"
     ## [5] "JY134"        "JY185"        "KMS257"       "RU2012-055"
 
 ``` r
@@ -209,8 +209,8 @@ all_my_data <- readVcf(filter1_bg)
 all_my_data
 ```
 
-    ## class: CollapsedVCF 
-    ## dim: 29294 8 
+    ## class: CollapsedVCF
+    ## dim: 29294 8
     ## rowRanges(vcf):
     ##   GRanges with 5 metadata columns: paramRangeID, REF, ALT, QUAL, FILTER
     ## info(vcf):
@@ -225,7 +225,7 @@ all_my_data
     ## geno(vcf):
     ##   SimpleList of length 2: GT, AD
     ## geno(header(vcf)):
-    ##       Number Type    Description 
+    ##       Number Type    Description
     ##    GT 1      String  Genotype    
     ##    AD R      Integer Allele Depth
 
@@ -237,7 +237,7 @@ We can get to the header, with the same data we found using `scanVcfHeader` on t
 header(all_my_data)
 ```
 
-    ## class: VCFHeader 
+    ## class: VCFHeader
     ## samples(8): JM-2014-H-28 JM-2014-K-8 ... KMS257 RU2012-055
     ## meta(4): fileDate fileformat phasing source
     ## fixed(0):
@@ -387,15 +387,15 @@ geno(all_my_data)$AD[1:10,]
     ## MockRefGenome:13346_C/A Integer,2    Integer,2   Integer,2   Integer,2  
     ## MockRefGenome:13563_C/T Integer,2    Integer,2   Integer,2   Integer,2  
     ##                         JY134     JY185     KMS257    RU2012-055
-    ## MockRefGenome:3311_A/G  Integer,2 Integer,2 Integer,2 Integer,2 
-    ## MockRefGenome:6284_G/A  Integer,2 Integer,2 Integer,2 Integer,2 
-    ## MockRefGenome:6333_A/T  Integer,2 Integer,2 Integer,2 Integer,2 
-    ## MockRefGenome:7285_C/T  Integer,2 Integer,2 Integer,2 Integer,2 
-    ## MockRefGenome:8822_T/A  Integer,2 Integer,2 Integer,2 Integer,2 
-    ## MockRefGenome:11589_C/A Integer,2 Integer,2 Integer,2 Integer,2 
-    ## MockRefGenome:12355_C/T Integer,2 Integer,2 Integer,2 Integer,2 
-    ## MockRefGenome:12663_T/C Integer,2 Integer,2 Integer,2 Integer,2 
-    ## MockRefGenome:13346_C/A Integer,2 Integer,2 Integer,2 Integer,2 
+    ## MockRefGenome:3311_A/G  Integer,2 Integer,2 Integer,2 Integer,2
+    ## MockRefGenome:6284_G/A  Integer,2 Integer,2 Integer,2 Integer,2
+    ## MockRefGenome:6333_A/T  Integer,2 Integer,2 Integer,2 Integer,2
+    ## MockRefGenome:7285_C/T  Integer,2 Integer,2 Integer,2 Integer,2
+    ## MockRefGenome:8822_T/A  Integer,2 Integer,2 Integer,2 Integer,2
+    ## MockRefGenome:11589_C/A Integer,2 Integer,2 Integer,2 Integer,2
+    ## MockRefGenome:12355_C/T Integer,2 Integer,2 Integer,2 Integer,2
+    ## MockRefGenome:12663_T/C Integer,2 Integer,2 Integer,2 Integer,2
+    ## MockRefGenome:13346_C/A Integer,2 Integer,2 Integer,2 Integer,2
     ## MockRefGenome:13563_C/T Integer,2 Integer,2 Integer,2 Integer,2
 
 ``` r
@@ -462,8 +462,8 @@ We also allowed 25% missing data when we ran GBS-SNP-CROP. We can see that when 
 table(info(all_my_data)$NS)
 ```
 
-    ## 
-    ##     7     8 
+    ##
+    ##     7     8
     ## 16473 12821
 
 Or perhaps it was &lt;25% missing data. If we wanted no missing data at all, we could make a filter function.
@@ -515,8 +515,8 @@ first1000 <- readVcf(mycon)
 first1000
 ```
 
-    ## class: CollapsedVCF 
-    ## dim: 1000 8 
+    ## class: CollapsedVCF
+    ## dim: 1000 8
     ## rowRanges(vcf):
     ##   GRanges with 5 metadata columns: paramRangeID, REF, ALT, QUAL, FILTER
     ## info(vcf):
@@ -531,7 +531,7 @@ first1000
     ## geno(vcf):
     ##   SimpleList of length 2: GT, AD
     ## geno(header(vcf)):
-    ##       Number Type    Description 
+    ##       Number Type    Description
     ##    GT 1      String  Genotype    
     ##    AD R      Integer Allele Depth
 
@@ -542,8 +542,8 @@ next1000 <- readVcf(mycon)
 next1000
 ```
 
-    ## class: CollapsedVCF 
-    ## dim: 1000 8 
+    ## class: CollapsedVCF
+    ## dim: 1000 8
     ## rowRanges(vcf):
     ##   GRanges with 5 metadata columns: paramRangeID, REF, ALT, QUAL, FILTER
     ## info(vcf):
@@ -558,7 +558,7 @@ next1000
     ## geno(vcf):
     ##   SimpleList of length 2: GT, AD
     ## geno(header(vcf)):
-    ##       Number Type    Description 
+    ##       Number Type    Description
     ##    GT 1      String  Genotype    
     ##    AD R      Integer Allele Depth
 
@@ -681,8 +681,8 @@ close(mycon)
 first1000slim
 ```
 
-    ## class: CollapsedVCF 
-    ## dim: 1000 8 
+    ## class: CollapsedVCF
+    ## dim: 1000 8
     ## rowRanges(vcf):
     ##   GRanges with 3 metadata columns: paramRangeID, REF, ALT
     ## info(vcf):
@@ -694,7 +694,7 @@ first1000slim
     ## geno(vcf):
     ##   SimpleList of length 1: AD
     ## geno(header(vcf)):
-    ##       Number Type    Description 
+    ##       Number Type    Description
     ##    AD R      Integer Allele Depth
 
 ``` r
@@ -744,8 +744,8 @@ close(mycon)
 first1000slim2
 ```
 
-    ## class: CollapsedVCF 
-    ## dim: 1000 4 
+    ## class: CollapsedVCF
+    ## dim: 1000 4
     ## rowRanges(vcf):
     ##   GRanges with 3 metadata columns: paramRangeID, REF, ALT
     ## info(vcf):
@@ -757,7 +757,7 @@ first1000slim2
     ## geno(vcf):
     ##   SimpleList of length 1: AD
     ## geno(header(vcf)):
-    ##       Number Type    Description 
+    ##       Number Type    Description
     ##    AD R      Integer Allele Depth
 
 ``` r

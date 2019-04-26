@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 We will use the `VariantAnnotation` package from
 [Bioconductor](http://bioconductor.org/packages/release/bioc/html/VariantAnnotation.html)
-to read and filter VCFs.  We will also use `ape` to do a phylogenetic tree.
+to read and filter VCFs.  We will also use `ape` to make a phylogenetic tree.
 If you don't have these packages already, install them like so:
 
 ```{r eval = FALSE}
@@ -266,7 +266,7 @@ filterVcf(mybg, genome = "MsaMockReference",
 
 ## Working with big VCFs
 
-That's all well and good for this little 5 Mb VCF, where we could import the 
+That's all well and good for this little 5 Mb VCF, where we could import the
 whole thing and explore it before deciding how we wanted to filter it.  What
 about a 50 Gb VCF?
 
@@ -379,4 +379,3 @@ filterVcf(mybg, genome = "MsaMockReference",
 ```{r}
 cat(readLines(filter3_file, 20), sep = "\n")
 ```
-
