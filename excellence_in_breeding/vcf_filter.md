@@ -156,7 +156,7 @@ cat(mylines[!keepem], sep = "\n")
 Here is how I would apply that filter to my VCF file, exporting a filtered VCF.
 
 ``` r
-filter1_file <- "Msa_GBSdemo_filter1.vcf"
+filter1_file <- "Msa_GSCdemo_filter1.vcf"
 ```
 
 ``` r
@@ -481,7 +481,7 @@ mean(NoMissing(all_my_data))
 Then we could use both of those functions as filters. We could even combine them with the prefilter we made before.
 
 ``` r
-filter2_file <- "Msa_GBSdemo_filter2.vcf"
+filter2_file <- "Msa_GSCdemo_filter2.vcf"
 ```
 
 ``` r
@@ -805,7 +805,7 @@ rowRanges(specific_range)
 `ScanVcfParam` is not only useful for importing data, but also filtering.
 
 ``` r
-filter3_file <- "Msa_GBSdemo_filter3.vcf"
+filter3_file <- "Msa_GSCdemo_filter3.vcf"
 ```
 
 ``` r
