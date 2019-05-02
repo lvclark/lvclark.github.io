@@ -15,9 +15,9 @@ If you don't already have the following packages, install them:
 
 ```{r eval = FALSE}
 CRAN_packages <- c("polyRAD", "BiocManager", "qqman")
-Bioconductor_packges <- c("pcaMethods", "VariantAnnotation")
+Bioconductor_packages <- c("pcaMethods", "VariantAnnotation")
 
-BiocManager::install(Bioconductor_packges)
+BiocManager::install(Bioconductor_packages)
 install.packages(CRAN_packages)
 ```
 
