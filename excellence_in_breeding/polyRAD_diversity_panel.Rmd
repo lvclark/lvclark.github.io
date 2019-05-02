@@ -153,6 +153,57 @@ that we have estimated allele dosage more accurately.
 plot(myRAD)
 ```
 
+## Exploring the results
+
+We can look at the allele depth matrix, and see that the first four alleles
+belong to the same locus.
+
+```{r}
+myRAD$alleleDepth[1:10,1:5]
+```
+
+polyRAD not only estimated the overall frequency of these alleles in the
+population, but also the frequency in the local subpopulation that each
+individual originated from.
+
+```{r}
+myRAD$alleleFreq[1:4]
+myRAD$alleleFreqByTaxa[1:10,1:4]
+```
+
+These local allele frequencies were used for estimating local genotype
+frequencies under Hardy-Weinberg equilibrium (although we could have also
+specified a self-fertilization rate).
+
+```{r}
+myRAD$priorProb[[1]][,1:5,1:4]
+```
+
+Genotype likelihoods were estimated from allelic read depth for each individual,
+under a beta-binomial distribution using our selected overdispersion parameter.
+
+```{r}
+myRAD$genotypeLikelihood[[1]][,1:5,1:4]
+```
+
+Together, the genotype priors and likelihoods were used to estimate the genotype
+posterior probabilities.
+
+```{r}
+myRAD$posteriorProb[[1]][,1:5,1:4]
+```
+
+From these, we can estimate posterior mean genotypes that give us a rough idea
+of allele copy number for each individual and allele.
+
+```{r}
+posteriormean <- GetWeightedMeanGenotypes(myRAD, maxval = 4,
+                                          omit1allelePerLocus = FALSE)
+posteriormean[1:10,1:4]
+```
+
+## Exporting the genotypes
+
 We can export to GAPIT format so that we may perform GWAS next.
 
 ```{r}
