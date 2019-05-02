@@ -1,8 +1,8 @@
 ---
-layout: page
 title: Genotype calling in a tetraploid diversity panel with polyRAD
-aside:
-  toc: true
+layout: page
+  aside:
+    toc: true
 ---
 
 Packages for this tutorial
@@ -45,10 +45,10 @@ hdr <- scanVcfHeader(vcf_file)
 hdr
 ```
 
-    ## class: VCFHeader
+    ## class: VCFHeader 
     ## samples(268): PMS-458 KMS-widespread ... KMS410 JM2014-H-7
     ## meta(4): fileDate fileformat Tassel contig
-    ## fixed(0):
+    ## fixed(1): FILTER
     ## info(3): NS DP AF
     ## geno(5): GT AD DP GQ PL
 
@@ -208,7 +208,7 @@ myRAD
     ## 268 taxa and 5097 loci
     ## 54160327 total reads
     ## Assumed sample cross-contamination rate of 0.001
-    ##
+    ## 
     ## Possible ploidies:
     ## Autotetraploid (4)
 
@@ -218,10 +218,10 @@ We can see that we imported 5097 loci. The default behavior of `VCF2RADdata` is 
 table(table(myRAD$alleles2loc))
 ```
 
-    ##
-    ##    2    3    4    5    6    7    8    9   10   11   12   13   15   16   17
-    ## 1829 1230  844  536  289  168   85   47   33    9    9    4    2    2    1
-    ##   19   20   21
+    ## 
+    ##    2    3    4    5    6    7    8    9   10   11   12   13   15   16   17 
+    ## 1829 1230  844  536  289  168   85   47   33    9    9    4    2    2    1 
+    ##   19   20   21 
     ##    3    3    3
 
 Most markers are biallelic or triallelic, but there are many with more alleles.
@@ -255,8 +255,8 @@ sort(GetTaxa(myRAD)[myRAD$PCA[,1] < -5]) # N Japan
     ## [45] "JM2014-H-66"   "JM2014-H-67"   "JM2014-H-68"   "JM2014-H-69"  
     ## [49] "JM2014-H-7"    "JM2014-H-70"   "JM2014-H-71"   "JM2014-H-72"  
     ## [53] "JM2014-H-73"   "JM2014-H-75"   "JM2014-H-76"   "JM2014-H-77"  
-    ## [57] "JM2014-H-78"   "JM2014-H-8"    "JM2014-H-9"    "JMKamishoN24"
-    ## [61] "JMNaganumaFSC" "JMTomatoN24"   "JPN-2010-003"  "JPN-2010-005"
+    ## [57] "JM2014-H-78"   "JM2014-H-8"    "JM2014-H-9"    "JMKamishoN24" 
+    ## [61] "JMNaganumaFSC" "JMTomatoN24"   "JPN-2010-003"  "JPN-2010-005" 
     ## [65] "JPN-2011-008"  "JPN-2011-010"
 
 ``` r
