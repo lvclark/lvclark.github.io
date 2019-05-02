@@ -12,7 +12,7 @@ Datasets for tutorials are available at
 
 Wednesday, May 8
 
-* Tools for variant and genotype calling -- To be added
+* Tools for variant and genotype calling -- [Powerpoint](excellence_in_breeding/Variant_and_Genotype_Calling_in_Polyploids.pdf)
 * File formats for polyploid genotypes -- [Powerpoint](excellence_in_breeding/File_formats_for_polyploid_genotypes.pdf)
 * Genotype calling with polyRAD in a sweetpotato F1 population -- [Tutorial on web](excellence_in_breeding/sweetpotato_F1_polyRAD_tutorial.html) -- [Download R markdown](excellence_in_breeding/sweetpotato_F1_polyRAD_tutorial.Rmd)
 * Genotype calling with polyRAD in a *Miscanthus* diversity panel -- [Tutorial on web](excellence_in_breeding/polyRAD_diversity_panel.html) -- [Download R markdown](excellence_in_breeding/polyRAD_diversity_panel.Rmd)
