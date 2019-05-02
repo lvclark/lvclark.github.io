@@ -42,18 +42,19 @@ python barcode_splitter_script.py -b 190419remainingMsa_barcodekey_Hiseq4000.csv
 
 Out of the files that were generated, we will use the following ones for further
 analysis.  These are all tetraploid, non-hybrid *Miscanthus sacchariflorus*
-accessions.
+accessions.  If you wish to download the FASTQ files in order to reproduce this
+entire tutorial, the run accession numbers on NCBI-SRA are provided.
 
-| File                    | Sample       | Provenance  |
-|-------------------------|--------------|-------------|
-| DOEMsa56a_CCTCCAGA.fq   | JM-2014-H-28 | Japan       |
-| DOEMsa56a_CCATAAG.fq    | JM-2014-K-8  | Japan       |
-| DOEMsa56a_GGTGGCCA.fq   | JM-2014-M-5  | Japan       |
-| DOEMsa56a_GCGGTCCA.fq   | JM-2014-S-5  | Japan       |
-| DOEMsa56a_TTGTTGTCTA.fq | JY134        | China       |
-| DOEMsa56a_CCACCATCAG.fq | JY185        | China       |
-| DOEMsa56a_GGTGCCA.fq    | KMS257       | South Korea |
-| DOEMsa56a_TTCTGACA.fq   | RU2012-055   | Russia      |
+| File                    | Sample       | Provenance  | SRA        |
+|-------------------------|--------------|-------------|------------|
+| DOEMsa56a_CCTCCAGA.fq   | JM-2014-H-28 | Japan       | SRR8997766 |
+| DOEMsa56a_CCATAAG.fq    | JM-2014-K-8  | Japan       | SRR8997767	|
+| DOEMsa56a_GGTGGCCA.fq   | JM-2014-M-5  | Japan       | SRR8997511 |
+| DOEMsa56a_GCGGTCCA.fq   | JM-2014-S-5  | Japan       | SRR8997617 |
+| DOEMsa56a_TTGTTGTCTA.fq | JY134        | China       | SRR8997716	|
+| DOEMsa56a_CCACCATCAG.fq | JY185        | China       | SRR8997496 |
+| DOEMsa56a_GGTGCCA.fq    | KMS257       | South Korea | SRR8997613 |
+| DOEMsa56a_TTCTGACA.fq   | RU2012-055   | Russia      | SRR8991820 |
 
 The sequences then need to all be trimmed to the same length, in particular
 because the barcodes were variable length and we don't want to call SNPs at the
