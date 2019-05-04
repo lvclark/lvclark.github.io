@@ -1,0 +1,239 @@
+---
+title: "Genomic prediction using posterior mean genotypes"
+author: "Lindsay Clark"
+date: "April 18, 2019"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Packages and setup
+
+We'll use RR-BLUP for kinship-based genomic prediction.  Under the assumption
+that every locus in the genome contributes equally to variance in the
+phenotype, the genotype matrix can be reduced to a square kinship matrix, which
+considerably reduces computational time.  There are other methods that assume
+variance is different from locus to locus, which you might look into if you are
+doing genomic prediction in your own work.
+
+If you don't already have `rrBLUP`, install it:
+
+```{r eval = FALSE}
+install.packages("rrBLUP")
+```
+
+Then load it into your R environment:
+
+```{r}
+library(rrBLUP)
+```
+
+So that my results are identical you yours, I am setting a random seed.
+
+```{r}
+set.seed(050919)
+```
+
+## Dataset
+
+We will use the *Miscanthus sacchariflorus* dataset from the
+[polyRAD tutorial](polyRAD_diversity_panel.html), with 268 individuals
+and 5097 loci.  In that tutorial we formatted posterior mean genotypes for
+rrBLUP.
+
+```{r}
+load("Msa_tetraploids_Chr05_rrb.RData")
+str(rrb_geno)
+```
+
+Because many loci had multiple alleles, we have data for 13,168 alleles,
+treating each allele as though it were a biallelic marker.  The common allele
+was omitted for each locus.  The data are scaled so that `-1` indicates zero
+copies of the allele, and `1` indicates four copies.
+
+```{r}
+rrb_geno[1:20,1:4]
+```
+
+For example, here we can see that "KMS-widespread" and "JY183" each likely have
+one copy of the TTA allele at S05_51928.  "UI11-00005" likely has two copies
+of the ATC allele at this same locus.
+
+The phenotype data is in a CSV:
+
+```{r}
+pheno <- read.csv("Msa_tetraploids_pheno.csv", stringsAsFactors = FALSE)
+head(pheno)
+```
+
+We will subset to just taxa that have data, leaving 230 taxa:
+
+```{r}
+pheno <- pheno[!is.na(pheno$Stem_diameter),]
+str(pheno)
+all(pheno$Taxa %in% rownames(rrb_geno))
+rrb_geno <- rrb_geno[pheno$Taxa,]
+str(rrb_geno)
+```
+
+## Estimating the relationship matrix
+
+From these genotypes, we will use `rrBLUP` to calculate the realized additive
+relationship matrix.  This is accomplished with the `A.mat` function.  No
+imputation is necessary since polyRAD already used genotype priors to impute
+any genotypes with zero reads.
+
+```{r}
+Msa_A <- A.mat(rrb_geno)
+heatmap(Msa_A)
+```
+
+The clustering makes sense here.  The biggest split is between Japan
+(lower left) and mainland Asia (upper right), and Japan is divided into north
+and south.
+
+## Setting up functions for cross-validation
+
+To test the accuracy of our genomic prediction, we will perform five-fold
+cross validation.  To do this, we will divide our set of individuals into
+five groups at random.  We will then perform genomic prediction five times,
+each time with one of the groups being the prediction set (phenotypes unknown)
+and the other four being the training set (phenotypes known).  We will see
+how accurately our predicted phenotypes match the real ones.  We will repeat
+that whole process 100 times.
+
+Below is a function to make the random groups.
+
+```{r}
+# Function to divide a set of individuals randomly into a set of gruops
+# for X-fold cross-validation.
+# nind is the total number of individuals.
+# ngrp is the number of groups desired.
+# The output is a list of vectors, with each vector giving the indices of
+# individuals in a group.
+GenerateGroups <- function(nind, ngrp){
+  outlist <- vector("list", ngrp)     # to contain output
+  scramble <- sample(nind)            # random order for individuals
+  
+  nPerGrp <- rep(nind %/% ngrp, ngrp) # number of individuals in each group
+  nExtra <- nind %% ngrp               # number of individuals left over
+  # increase size of some groups by 1 to get to total needed
+  nPerGrp <- nPerGrp + rep(c(0, 1), times = c(ngrp - nExtra, nExtra))
+  
+  # fill in vectors
+  for(i in 1:ngrp){
+    if(i == 1){
+      firstind <- 1
+    } else {
+      firstind <- sum(nPerGrp[1:(i - 1)]) + 1
+    }
+    lastind <- firstind + nPerGrp[i] - 1
+    outlist[[i]] <- sort(scramble[firstind:lastind])
+  }
+  
+  return(outlist)
+}
+
+# Test the function
+testgrp <- GenerateGroups(102, 5)
+testgrp
+sapply(testgrp, length)
+```
+
+If were were going to do genomic prediction using the entire dataset as the
+training set, we would do it using `kin.blup` like this:
+
+```{r}
+mypred <- kin.blup(data = pheno, geno = "Taxa", pheno = "Stem_diameter",
+                   K = Msa_A)
+plot(pheno$Stem_diameter, mypred$g)
+```
+
+For cross-validation however, we want to mask some genotypes with `NA`.
+
+```{r}
+phenoMasked <- pheno
+toMask <- sample(230, 230/5)
+toMask
+phenoMasked$Stem_diameter[toMask] <- NA
+
+mypred <- kin.blup(data = phenoMasked,
+                   geno = "Taxa", pheno = "Stem_diameter",
+                   K = Msa_A)
+plot(pheno$Stem_diameter[toMask], mypred$g[toMask])
+```
+
+This gives a much more accurate depiction of how well genomic prediction
+will work.
+
+We can put that together into a function to get predicted values for all
+taxa.
+
+```{r}
+PredictPheno <- function(pheno, K, fold = 5){
+  ntaxa <- nrow(pheno) # number of taxa
+  predval <- numeric(ntaxa) # to hold predicted values
+  names(predval) <- pheno$Taxa
+  grps <- GenerateGroups(ntaxa, fold)
+  
+  for(i in 1:fold){
+    toMask <- grps[[i]]
+    phenoMasked <- pheno
+    phenoMasked[[2]][toMask] <- NA
+    mypred <- kin.blup(data = phenoMasked,
+                   geno = "Taxa", pheno = names(pheno)[2],
+                   K = K)
+    predval[toMask] <- mypred$g[toMask]
+  }
+  
+  return(predval)
+}
+
+testpred <- PredictPheno(pheno = pheno, K = Msa_A)
+plot(pheno$Stem_diameter, testpred)
+cor(pheno$Stem_diameter, testpred)
+```
+
+So on this first test, we have a prediction accuracy of 0.74.
+
+## Running replicates of the cross validation
+
+The prediction accuracy could change a lot depending on how individuals are
+divided into groups.  For this reason, we want to repeat the above protocol
+at least 100 times and see what the average accuracy is.
+
+```{r}
+nreps <- 100
+# to hold predicted GEBVs
+predmat <- matrix(nrow = nrow(pheno), ncol = nreps,
+                  dimnames = list(pheno$Taxa, NULL))
+# to hold prediction accuracy
+predacc <- numeric(nreps)
+
+for(i in 1:nreps){
+  predmat[,i] <- PredictPheno(pheno = pheno, K = Msa_A)
+  predacc[i] <- cor(pheno$Stem_diameter, predmat[,i])
+}
+
+mean(predacc)
+hist(predacc)
+```
+
+So, 0.74 is the mean prediction accuracy, and it doesn't tend to very a lot
+from there.
+
+How can we have an accuracy so high when we only used one chromosome?  Most of
+it can be attributed to the trait being correlated with population structure and
+relatedness.
+
+If we wanted to export the GEBVs for the purpose of selecting parents for
+breeding, we could do it like so:
+
+```{r}
+gebvs <- rowMeans(predmat)
+gebvs[1:15]
+write.csv(gebvs, file = "Msa_gebvs.csv")
+```
+

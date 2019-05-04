@@ -20,7 +20,7 @@ Wednesday, May 8
 Thursday, May 9
 
 * GWAS in GAPIT with posterior mean genotypes -- [Tutorial on web](excellence_in_breeding/GAPIT_tetraploid.html) -- [Download R markdown](excellence_in_breeding/GAPIT_tetraploid.Rmd)
-* Genomic prediction in rrBLUP using posterior mean genotypes -- To be added
+* Genomic prediction in rrBLUP using posterior mean genotypes -- [Tutorial on web](excellence_in_breeding/rrBLUP_tetraploid.html) -- [Download R markdown](excellence_in_breeding/rrBLUP_tetraploid.Rmd)
 
 Friday, May 10
 
