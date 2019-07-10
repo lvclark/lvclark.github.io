@@ -34,7 +34,7 @@ Alexander E. Lipka, Junhua Peng, Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu,
 Hua Zhao, Stephen P. Long, and Erik J. Sacks (2019) "Genome‐wide association and
 genomic prediction for biomass yield in a genetically diverse
 *Miscanthus sinensis* germplasm panel phenotyped at five locations in Asia and
-North America." GCB Bioenergy.
+North America." GCB Bioenergy 11(8): 988-1007.
 [doi:10.1111/gcbb.12620](https://doi.org/10.1111/gcbb.12620)
 [Datasets and R Scripts](https://doi.org/10.13012/B2IDB-0790815_V3)
 [DNA Sequence Data](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
@@ -104,7 +104,7 @@ Toshihiko Yamada, Bimal Kumar Ghimire, Ji Hye Yoo, Chang Yeon Yu, Hua Zhao,
 Stephen P. Long, and Erik J. Sacks (2019)
 "Winter hardiness of *Miscanthus* (III): Genome‐wide association and genomic
 prediction for overwintering ability in *Miscanthus sinensis*."
-GCB Bioenergy.
+GCB Bioenergy 11(8): 930-955.
 [doi:10.1111/gcbb.12615](https://doi.org/10.1111/gcbb.12615)
 
 Hongxu Dong, Siyao Liu, Lindsay V. Clark, Shailendra Sharma, Justin M. Gifford,
