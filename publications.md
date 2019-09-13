@@ -44,7 +44,8 @@ Bimal Kumar Ghimire, Katarzyna Głowacka, Megan Hall, Kweon Heo, Xiaoli Jin,
 Alexander E. Lipka, Junhua Peng, Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu,
 Hua Zhao, Stephen P. Long, and Erik J. Sacks (2019) "Biomass yield in a
 genetically diverse *Miscanthus sinensis* germplasm panel evaluated at five
-locations revealed individuals with exceptional potential." GCB Bioenergy.
+locations revealed individuals with exceptional potential."
+GCB Bioenergy 11(10): 1125-1145.
 [doi:10.1111/gcbb.12606](https://doi.org/10.1111/gcbb.12606)
 [Datasets and R Scripts](https://doi.org/10.13012/B2IDB-0790815_V3)
 
