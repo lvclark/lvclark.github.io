@@ -92,6 +92,12 @@ Annals of Botany 114(1):97-107.
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
 
+Marcus O. Olatoye, Lindsay V. Clark, Jianping Wang, Xiping Yang,
+Toshihiko Yamada, Erik J. Sacks, and Alexander E. Lipka (2019) "Evaluation of
+genomic selection and marker-assisted selection in *Miscanthus* and energycane."
+Molecular Breeding, 39:171.
+[doi:10.1007/s11032-019-1081-5](https://doi.org/10.1007/s11032-019-1081-5)
+
 Clifton-Brown, J. C., Harfouche, A., Casler, M. D., Jones, H. D.,
 Macalpine, W. J., Murphy-Bokern, D., … Lewandowski, I. (2019).
 "Breeding progress and preparedness for mass-scale deployment of perennial
