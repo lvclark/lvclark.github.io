@@ -54,10 +54,10 @@ Larissa Bagmet, Pavel Chebukin, Martin Deuter, Elena Dzyubenko,
 Nicolay Dzyubenko, Kweon Heo, Douglas A. Johnson, Uffe Jorgensen,
 Jens B. Kjeldsen, Hironori Nagano, Junhua Peng, Andrey Sabitov,
 Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu, Stephen P. Long, and Erik J. Sacks
-(2018) "Population structure of *Miscanthus sacchariflorus* reveals two major
+(2019) "Population structure of *Miscanthus sacchariflorus* reveals two major
 polyploidization events, tetraploid-mediated unidirectional introgression from
 diploid *M. sinensis*, and diversity centered around the Yellow Sea."
-Annals of Botany.
+Annals of Botany 124(4): 731-748.
 [doi:10.1093/aob/mcy161](https://doi.org/10.1093/aob/mcy161).
 [Datasets and R Scripts](https://doi.org/10.13012/B2IDB-0170190_V3)
 [DNA Sequence data](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA342314)
