@@ -7,6 +7,12 @@ aside:
 
 ### Bioinformatics
 
+Lindsay V. Clark, Wittney Mays, Alexander E. Lipka, and Erik J. Sacks (2020)
+"A population-level statistic for assessing Mendelian behavior of
+genotyping-by-sequencing data from highly duplicated genomes."
+Preprint on bioRxiv.
+[doi:10.1101/2020.01.11.902890](https://doi.org/10.1101/2020.01.11.902890)
+
 Lindsay V. Clark, Alexander E. Lipka, and Erik J. Sacks (2019) "polyRAD:
 Genotype calling with uncertainty from sequencing data in polyploids and
 diploids." G3 9(3) 663-673.
@@ -91,6 +97,16 @@ Annals of Botany 114(1):97-107.
 [doi:10.1093/aob/mcu084](https://doi.org/10.1093/aob/mcu084)
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
+
+Marcus O. Olatoye, Lindsay V. Clark, Nicholas R. Labonte, Hongxu Dong,
+Maria S. Dwiyanti, Kossonou G. Anzoua, Joe E. Brummer, Bimal K. Ghimire,
+Elena Dzyubenko, Nikolay Dzyubenko, Larisa Bagmet, Andrey Sabitov,
+Pavel Chebukin, Katarzyna Głowacka, Kweon Heo, Xiaoli Jin, Hironori Nagano,
+Junhua Peng, Chang Y. Yu, Ji H. Yoo, Hua Zhao, Stephen P. Long,
+Toshihiko Yamada, Erik J. Sacks and Alexander E. Lipka (2020)
+"Training Population Optimization for Genomic Selection in *Miscanthus*."
+G3, 10(7):2465-2476.
+[doi:10.1534/g3.120.401402](https://doi.org/10.1534/g3.120.401402)
 
 Marcus O. Olatoye, Lindsay V. Clark, Jianping Wang, Xiping Yang,
 Toshihiko Yamada, Erik J. Sacks, and Alexander E. Lipka (2019) "Evaluation of
