@@ -5,7 +5,7 @@ aside:
   toc: true
 ---
 
-### Bioinformatics
+### Bioinformatics software and methodology
 
 Lindsay V. Clark, Wittney Mays, Alexander E. Lipka, and Erik J. Sacks (2020)
 "A population-level statistic for assessing Mendelian behavior of
@@ -31,6 +31,14 @@ of read counts from GBS and RAD-seq data"  Source Code for Biology and Medicine.
 Lindsay V. Clark and Marie Jasieniuk (2011) "POLYSAT: an R package for polyploid
 microsatellite analysis." Molecular Ecology Resources 11(3):562-566.
 [doi:10.1111/j.1755-0998.2011.02985.x](https://doi.org/10.1111/j.1755-0998.2011.02985.x)
+
+### HPCBio projects, Roy J. Carver Biotechnology Center
+
+Hongmei Li-Byarlay, Humberto Boncristiani, Gary Howell, Jake Herman,
+Lindsay Clark, Micheline K. Strand, David Tarpy and Olav Rueppell (2020)
+"Transcriptomic and Epigenomic Dynamics of Honey Bees in Response to Lethal
+Viral Infection." Frontiers in Genetics 11:1056.
+[doi:10.3389/fgene.2020.566320](https://doi.org/10.3389/fgene.2020.566320)
 
 ### Miscanthus
 
