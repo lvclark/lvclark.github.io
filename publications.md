@@ -106,6 +106,21 @@ Annals of Botany 114(1):97-107.
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
 
+Therese Mitros, Adam M. Session, Brandon T. James, Guohong Albert Wu,
+Mohammad B. Belaffif, Lindsay V. Clark, Shengqiang Shu,
+Hongxu Dong, Adam Barling, Jessica R. Holmes, Jessica E. Mattick,
+Jessen V. Bredeson, Siyao Liu, Kerrie Farrar, Katarzyna Głowacka,
+Stanisław Jeżowski, Kerrie Barry, Won Byoung Chae, John A. Juvik,
+Justin Gifford, Adebosola Oladeinde, Toshihiko Yamada, Jane Grimwood,
+Nicholas H. Putnam, Jose De Vega, Susanne Barth, Manfred Klaas,
+Trevor Hodkinson, Laigeng Li, Xiaoli Jin, Junhua Peng, Chang Yeon Yu, Kweon Heo,
+Ji Hye Yoo, Bimal Kumar Ghimire, Iain S. Donnison, Jeremy Schmutz,
+Matthew E. Hudson, Erik J. Sacks, Stephen P. Moose, Kankshita Swaminathan,
+and Daniel S. Rokhsar (2020)
+Genome biology of the paleotetraploid perennial biomass crop *Miscanthus*.
+Nature Communications 11:5442.
+[doi:10.1038/s41467-020-18923-6](https://doi.org/10.1038/s41467-020-18923-6)
+
 Marcus O. Olatoye, Lindsay V. Clark, Nicholas R. Labonte, Hongxu Dong,
 Maria S. Dwiyanti, Kossonou G. Anzoua, Joe E. Brummer, Bimal K. Ghimire,
 Elena Dzyubenko, Nikolay Dzyubenko, Larisa Bagmet, Andrey Sabitov,
