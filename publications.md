@@ -34,6 +34,12 @@ microsatellite analysis." Molecular Ecology Resources 11(3):562-566.
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Eleonora Gatta, Vikram Saudagar, Jenny Drnevich, Marc Forrest, James Auta,
+Lindsay Clark, Henry Sershen, Robert Smith, Dennis Grayson, John Davis,
+and Alessandro Guidotti (2021) "Concordance of immune-related markers in
+lymphocytes and prefrontal cortex in schizophrenia." Schizophrenia Bulletin
+Open (in press).
+
 Hongmei Li-Byarlay, Humberto Boncristiani, Gary Howell, Jake Herman,
 Lindsay Clark, Micheline K. Strand, David Tarpy and Olav Rueppell (2020)
 "Transcriptomic and Epigenomic Dynamics of Honey Bees in Response to Lethal
@@ -105,6 +111,14 @@ Annals of Botany 114(1):97-107.
 [doi:10.1093/aob/mcu084](https://doi.org/10.1093/aob/mcu084)
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
+
+Hongxu Dong, Lindsay V Clark, Xiaoli Jin, Kossonou Anzoua, Larisa Bagmet,
+ Pavel Chebukin, Elena Dzyubenko, Nicolay Dzyubenko, Bimal Kumar Ghimire,
+Kweon Heo, Douglas A Johnson, Hironori Nagano, Andrey Sabitov, Junhua Peng,
+Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu, Hua Zhao, Stephen P Long,
+and Erik J Sacks (2021) "Managing flowering time in Miscanthus and sugarcane to
+facilitate intra- and intergeneric crosses." PLoS ONE 16(1): e0240390.
+[doi:10.1371/journal.pone.0240390](https://doi.org/10.1371/journal.pone.0240390)
 
 Therese Mitros, Adam M. Session, Brandon T. James, Guohong Albert Wu,
 Mohammad B. Belaffif, Lindsay V. Clark, Shengqiang Shu,
