@@ -112,8 +112,12 @@ Annals of Botany 114(1):97-107.
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
 
+Zhihui Guo, Meilan Xu, Hironori Nagano, Lindsay V. Clark, Erik J. Sacks,
+and Toshihiko Yamada (2021) "Characterization of the _Ghd8_ Flowering Time Gene
+in a Mini-Core Collection of _Miscanthus sinensis_." Genes (in press).
+
 Hongxu Dong, Lindsay V Clark, Xiaoli Jin, Kossonou Anzoua, Larisa Bagmet,
- Pavel Chebukin, Elena Dzyubenko, Nicolay Dzyubenko, Bimal Kumar Ghimire,
+Pavel Chebukin, Elena Dzyubenko, Nicolay Dzyubenko, Bimal Kumar Ghimire,
 Kweon Heo, Douglas A Johnson, Hironori Nagano, Andrey Sabitov, Junhua Peng,
 Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu, Hua Zhao, Stephen P Long,
 and Erik J Sacks (2021) "Managing flowering time in Miscanthus and sugarcane to
