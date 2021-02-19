@@ -114,7 +114,8 @@ Annals of Botany 114(1):97-107.
 
 Zhihui Guo, Meilan Xu, Hironori Nagano, Lindsay V. Clark, Erik J. Sacks,
 and Toshihiko Yamada (2021) "Characterization of the _Ghd8_ Flowering Time Gene
-in a Mini-Core Collection of _Miscanthus sinensis_." Genes (in press).
+in a Mini-Core Collection of _Miscanthus sinensis_." Genes 12(2):288.
+[doi:10.3390/genes12020288](https://doi.org/10.3390/genes12020288)
 
 Hongxu Dong, Lindsay V Clark, Xiaoli Jin, Kossonou Anzoua, Larisa Bagmet,
 Pavel Chebukin, Elena Dzyubenko, Nicolay Dzyubenko, Bimal Kumar Ghimire,
