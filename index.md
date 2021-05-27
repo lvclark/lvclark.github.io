@@ -1,9 +1,20 @@
 ## Welcome
 
-This website is for hosting training materials and documentation.
+I work for [HPCBio](https://hpcbio.illinois.edu/) at the University of Illinois,
+Urbana-Champaign, where I
+perform bioinformatics analysis, consultation, and training.  My background is
+in plant population genetics and breeding. I am a developer of software
+for the genetic analysis of polyploid organisms.  I earned a PhD in Genetics
+from UC Davis in 2011 and a BA in Genetics, Cell & Developmental Biology from
+Dartmouth College in 2004.
 
-My personal website with additional information can be found
-at <https://sites.google.com/site/lindsayvclarkgenetics/>.
+[LinkedIn](https://www.linkedin.com/in/lindsay-clark-75539aa9/)
+
+[ORCID](https://orcid.org/0000-0002-3881-9252)
+
+[Google Scholar](https://scholar.google.com/citations?user=d2OkHU4AAAAJ)
+
+[GitHub](https://github.com/lvclark/)
 
 ## Excellence in Breeding meeting May 8-10, 2019
 
