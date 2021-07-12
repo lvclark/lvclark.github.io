@@ -16,6 +16,8 @@ Dartmouth College in 2004.
 
 [GitHub](https://github.com/lvclark/)
 
+[Publons](https://publons.com/researcher/734253/lindsay-virginia-clark/)
+
 ## Excellence in Breeding meeting May 8-10, 2019
 
 Datasets for tutorials are available at
