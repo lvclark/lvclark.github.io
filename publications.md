@@ -38,7 +38,8 @@ Eleonora Gatta, Vikram Saudagar, Jenny Drnevich, Marc Forrest, James Auta,
 Lindsay Clark, Henry Sershen, Robert Smith, Dennis Grayson, John Davis,
 and Alessandro Guidotti (2021) "Concordance of immune-related markers in
 lymphocytes and prefrontal cortex in schizophrenia." Schizophrenia Bulletin
-Open (in press).
+Open 2(1):sgab002.
+[doi:10.1093/schizbullopen/sgab002](https://doi.org/10.1093/schizbullopen/sgab002).
 
 Hongmei Li-Byarlay, Humberto Boncristiani, Gary Howell, Jake Herman,
 Lindsay Clark, Micheline K. Strand, David Tarpy and Olav Rueppell (2020)
