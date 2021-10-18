@@ -34,6 +34,10 @@ microsatellite analysis." Molecular Ecology Resources 11(3):562-566.
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Lauren Marie Reilly, Fei He, Lindsay V. Clark, and Maria Regina Cattai de Godoy
+(2022) "Longitudinal assessment of taurine and amino acid concentrations in dogs
+fed a green lentil diet." Journal of Animal Science (in press).
+
 Eleonora Gatta, Vikram Saudagar, Jenny Drnevich, Marc Forrest, James Auta,
 Lindsay Clark, Henry Sershen, Robert Smith, Dennis Grayson, John Davis,
 and Alessandro Guidotti (2021) "Concordance of immune-related markers in
