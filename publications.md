@@ -34,6 +34,18 @@ microsatellite analysis." Molecular Ecology Resources 11(3):562-566.
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Karen Chiu, Shah Tauseef Bashir, Ahmed Abdel-Hamid, Lindsay Clark, Isaac Cann,
+Romana Nowak, Jodi Flaws (2022) "Isolation of DiNP-Degrading Microbes from the
+Mouse Colon and the Influence DiNP Exposure Has on the Microbiota, Intestinal
+Integrity, and Immune Status of the Colon." Toxics (in press).
+
+Lavanya Singh, James Emmanuel San, Houriiyah Tegally, Pius M. Brzoska, Ugochukwu
+J. Anyaneji, Eduan Wilkinson, Lindsay Clark, Jennifer Giandhari,
+Sureshne Pillay, Richard J. Lessels, Darren Patrick Martin, Manohar Furtado,
+Anmol M. Kiran, Tulio de Oliveira (2022) "Targeted Sanger sequencing to recover
+key mutations in SARS-CoV-2 variants genome assemblies produced by next
+generation sequencing." Microbial Genomics (in press).
+
 Lauren Marie Reilly, Fei He, Lindsay V. Clark, and Maria Regina Cattai de Godoy
 (2022) "Longitudinal assessment of taurine and amino acid concentrations in dogs
 fed a green lentil diet." Journal of Animal Science (in press).
