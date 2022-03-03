@@ -34,10 +34,15 @@ microsatellite analysis." Molecular Ecology Resources 11(3):562-566.
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Shannon E. Finnet, Fei He, Lindsay V. Clark, and Maria Regina Cattai de Godoy
+(2022) "Functional properties of miscanthus fiber and prebiotic blends in
+extruded canine diets." Journal of Animal Science (in press).
+
 Karen Chiu, Shah Tauseef Bashir, Ahmed Abdel-Hamid, Lindsay Clark, Isaac Cann,
 Romana Nowak, Jodi Flaws (2022) "Isolation of DiNP-Degrading Microbes from the
 Mouse Colon and the Influence DiNP Exposure Has on the Microbiota, Intestinal
-Integrity, and Immune Status of the Colon." Toxics (in press).
+Integrity, and Immune Status of the Colon." Toxics 10(2): 75.
+[doi:10.3390/toxics10020075](https://doi.org/10.3390/toxics10020075)
 
 Lavanya Singh, James Emmanuel San, Houriiyah Tegally, Pius M. Brzoska, Ugochukwu
 J. Anyaneji, Eduan Wilkinson, Lindsay Clark, Jennifer Giandhari,
@@ -47,8 +52,9 @@ key mutations in SARS-CoV-2 variants genome assemblies produced by next
 generation sequencing." Microbial Genomics (in press).
 
 Lauren Marie Reilly, Fei He, Lindsay V. Clark, and Maria Regina Cattai de Godoy
-(2022) "Longitudinal assessment of taurine and amino acid concentrations in dogs
-fed a green lentil diet." Journal of Animal Science (in press).
+(2021) "Longitudinal assessment of taurine and amino acid concentrations in dogs
+fed a green lentil diet." Journal of Animal Science 99(11): skab315.
+[doi:10.1093/jas/skab315](https://doi.org/10.1093/jas/skab315)
 
 Eleonora Gatta, Vikram Saudagar, Jenny Drnevich, Marc Forrest, James Auta,
 Lindsay Clark, Henry Sershen, Robert Smith, Dennis Grayson, John Davis,
