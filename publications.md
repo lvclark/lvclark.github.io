@@ -7,9 +7,10 @@ aside:
 
 ### Bioinformatics software and methodology
 
-Lindsay V. Clark, Wittney Mays, Alexander E. Lipka, and Erik J. Sacks (2020)
+Lindsay V. Clark, Wittney Mays, Alexander E. Lipka, and Erik J. Sacks (2022)
 "A population-level statistic for assessing Mendelian behavior of
 genotyping-by-sequencing data from highly duplicated genomes."
+BMC Bioinformatics (in press).
 Preprint on bioRxiv.
 [doi:10.1101/2020.01.11.902890](https://doi.org/10.1101/2020.01.11.902890)
 
