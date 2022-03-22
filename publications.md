@@ -10,13 +10,12 @@ aside:
 Lindsay V. Clark, Wittney Mays, Alexander E. Lipka, and Erik J. Sacks (2022)
 "A population-level statistic for assessing Mendelian behavior of
 genotyping-by-sequencing data from highly duplicated genomes."
-BMC Bioinformatics (in press).
-Preprint on bioRxiv.
-[doi:10.1101/2020.01.11.902890](https://doi.org/10.1101/2020.01.11.902890)
+BMC Bioinformatics 23: 101.
+[doi:doi:10.1186/s12859-022-04635-9](https://doi.org/10.1186/s12859-022-04635-9)
 
 Lindsay V. Clark, Alexander E. Lipka, and Erik J. Sacks (2019) "polyRAD:
 Genotype calling with uncertainty from sequencing data in polyploids and
-diploids." G3 9(3) 663-673.
+diploids." G3 9(3): 663-673.
 [doi:10.1534/g3.118.200913](https://doi.org/10.1534/g3.118.200913)
 
 Lindsay V. Clark and Andrea Drauch Schreier (2017) "Resolving microsatellite
@@ -26,11 +25,12 @@ Ecology Resources 17(5): 1090-1103.
 [doi:10.1111/1755-0998.12639](https://doi.org/10.1111/1755-0998.12639)
 
 Lindsay V. Clark and Erik J. Sacks (2016) "TagDigger: User-friendly extraction
-of read counts from GBS and RAD-seq data"  Source Code for Biology and Medicine.
+of read counts from GBS and RAD-seq data"  Source Code for Biology and Medicine
+11: 11.
 [doi: 10.1186/s13029-016-0057-7](https://doi.org/10.1186/s13029-016-0057-7)
 
 Lindsay V. Clark and Marie Jasieniuk (2011) "POLYSAT: an R package for polyploid
-microsatellite analysis." Molecular Ecology Resources 11(3):562-566.
+microsatellite analysis." Molecular Ecology Resources 11(3): 562-566.
 [doi:10.1111/j.1755-0998.2011.02985.x](https://doi.org/10.1111/j.1755-0998.2011.02985.x)
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
