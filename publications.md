@@ -11,7 +11,7 @@ Lindsay V. Clark, Wittney Mays, Alexander E. Lipka, and Erik J. Sacks (2022)
 "A population-level statistic for assessing Mendelian behavior of
 genotyping-by-sequencing data from highly duplicated genomes."
 BMC Bioinformatics 23: 101.
-[doi:doi:10.1186/s12859-022-04635-9](https://doi.org/10.1186/s12859-022-04635-9)
+[doi:10.1186/s12859-022-04635-9](https://doi.org/10.1186/s12859-022-04635-9)
 
 Lindsay V. Clark, Alexander E. Lipka, and Erik J. Sacks (2019) "polyRAD:
 Genotype calling with uncertainty from sequencing data in polyploids and
@@ -35,9 +35,21 @@ microsatellite analysis." Molecular Ecology Resources 11(3): 562-566.
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Jean-Tristan Brandenburg, Lindsay Clark, Gerrit Botha, Sumir Panji, Shakuntala
+Baichoo, Christopher Fields, Scott Hazelhurst (2022) "H3AGWAS: A portable
+workflow for genome-wide association studies." Preprint on bioRxiv.
+[doi:10.1101/2022.05.02.490206](https://doi.org/10.1101/2022.05.02.490206)
+
+Colin Lim, Tristan X. McCallister, Christian Saporito-Magriña, Garrett D.
+McPheron, Ramya Krishnan, M. Alejandra Zeballos C., Jackson E. Powell,
+Lindsay V. Clark, Pablo Perez-Pinera, and Thomas Gaj (2022) "CRISPR base editing
+of cis-regulatory elements enables target gene perturbations." Molecular
+Therapy (in press).
+
 Shannon E. Finnet, Fei He, Lindsay V. Clark, and Maria Regina Cattai de Godoy
 (2022) "Functional properties of miscanthus fiber and prebiotic blends in
-extruded canine diets." Journal of Animal Science (in press).
+extruded canine diets." Journal of Animal Science 100(4): skac078.
+[doi:10.1093/jas/skac078](https://doi.org/10.1093/jas/skac078)
 
 Karen Chiu, Shah Tauseef Bashir, Ahmed Abdel-Hamid, Lindsay Clark, Isaac Cann,
 Romana Nowak, Jodi Flaws (2022) "Isolation of DiNP-Degrading Microbes from the
@@ -50,7 +62,8 @@ J. Anyaneji, Eduan Wilkinson, Lindsay Clark, Jennifer Giandhari,
 Sureshne Pillay, Richard J. Lessels, Darren Patrick Martin, Manohar Furtado,
 Anmol M. Kiran, Tulio de Oliveira (2022) "Targeted Sanger sequencing to recover
 key mutations in SARS-CoV-2 variants genome assemblies produced by next
-generation sequencing." Microbial Genomics (in press).
+generation sequencing." Microbial Genomics 8(3).
+[doi:10.1099/mgen.0.000774](https://doi.org/10.1099/mgen.0.000774)
 
 Lauren Marie Reilly, Fei He, Lindsay V. Clark, and Maria Regina Cattai de Godoy
 (2021) "Longitudinal assessment of taurine and amino acid concentrations in dogs
