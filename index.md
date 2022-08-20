@@ -1,9 +1,10 @@
 ## Welcome
 
-I work for [HPCBio](https://hpcbio.illinois.edu/) at the University of Illinois,
-Urbana-Champaign, where I
-perform bioinformatics analysis, consultation, and training.  My background is
-in plant population genetics and breeding. I am a developer of software
+I am a Senior Data Scientist in the Research Scientific Computing group at
+Seattle Children's Research Institute.  My prior background is
+in plant population genetics and breeding. I also provided general bioinformatics
+support while working with HPCBio at the University of Illinois from 2019-2022.
+I am a developer of software
 for the genetic analysis of polyploid organisms.  I earned a PhD in Genetics
 from UC Davis in 2011 and a BA in Genetics, Cell & Developmental Biology from
 Dartmouth College in 2004.
