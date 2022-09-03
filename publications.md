@@ -33,12 +33,20 @@ Lindsay V. Clark and Marie Jasieniuk (2011) "POLYSAT: an R package for polyploid
 microsatellite analysis." Molecular Ecology Resources 11(3): 562-566.
 [doi:10.1111/j.1755-0998.2011.02985.x](https://doi.org/10.1111/j.1755-0998.2011.02985.x)
 
-### HPCBio projects, Roy J. Carver Biotechnology Center
-
 Jean-Tristan Brandenburg, Lindsay Clark, Gerrit Botha, Sumir Panji, Shakuntala
 Baichoo, Christopher Fields, Scott Hazelhurst (2022) "H3AGWAS: A portable
 workflow for genome-wide association studies." Preprint on bioRxiv.
 [doi:10.1101/2022.05.02.490206](https://doi.org/10.1101/2022.05.02.490206)
+
+Lavanya Singh, James Emmanuel San, Houriiyah Tegally, Pius M. Brzoska, Ugochukwu
+J. Anyaneji, Eduan Wilkinson, Lindsay Clark, Jennifer Giandhari,
+Sureshne Pillay, Richard J. Lessels, Darren Patrick Martin, Manohar Furtado,
+Anmol M. Kiran, Tulio de Oliveira (2022) "Targeted Sanger sequencing to recover
+key mutations in SARS-CoV-2 variants genome assemblies produced by next
+generation sequencing." Microbial Genomics 8(3).
+[doi:10.1099/mgen.0.000774](https://doi.org/10.1099/mgen.0.000774)
+
+### HPCBio projects, Roy J. Carver Biotechnology Center
 
 Colin Lim, Tristan X. McCallister, Christian Saporito-Magriña, Garrett D.
 McPheron, Ramya Krishnan, M. Alejandra Zeballos C., Jackson E. Powell,
@@ -57,14 +65,6 @@ Romana Nowak, Jodi Flaws (2022) "Isolation of DiNP-Degrading Microbes from the
 Mouse Colon and the Influence DiNP Exposure Has on the Microbiota, Intestinal
 Integrity, and Immune Status of the Colon." Toxics 10(2): 75.
 [doi:10.3390/toxics10020075](https://doi.org/10.3390/toxics10020075)
-
-Lavanya Singh, James Emmanuel San, Houriiyah Tegally, Pius M. Brzoska, Ugochukwu
-J. Anyaneji, Eduan Wilkinson, Lindsay Clark, Jennifer Giandhari,
-Sureshne Pillay, Richard J. Lessels, Darren Patrick Martin, Manohar Furtado,
-Anmol M. Kiran, Tulio de Oliveira (2022) "Targeted Sanger sequencing to recover
-key mutations in SARS-CoV-2 variants genome assemblies produced by next
-generation sequencing." Microbial Genomics 8(3).
-[doi:10.1099/mgen.0.000774](https://doi.org/10.1099/mgen.0.000774)
 
 Lauren Marie Reilly, Fei He, Lindsay V. Clark, and Maria Regina Cattai de Godoy
 (2021) "Longitudinal assessment of taurine and amino acid concentrations in dogs
