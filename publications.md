@@ -43,8 +43,9 @@ workflow for genome-wide association studies." Preprint on bioRxiv.
 Colin Lim, Tristan X. McCallister, Christian Saporito-Magriña, Garrett D.
 McPheron, Ramya Krishnan, M. Alejandra Zeballos C., Jackson E. Powell,
 Lindsay V. Clark, Pablo Perez-Pinera, and Thomas Gaj (2022) "CRISPR base editing
-of cis-regulatory elements enables target gene perturbations." Molecular
-Therapy (in press).
+of cis-regulatory elements enables the perturbation of neurodegeneration-linked
+genes." Molecular Therapy (in press).
+[doi:10.1016/j.ymthe.2022.08.008](https://doi.org/10.1016/j.ymthe.2022.08.008)
 
 Shannon E. Finnet, Fei He, Lindsay V. Clark, and Maria Regina Cattai de Godoy
 (2022) "Functional properties of miscanthus fiber and prebiotic blends in
