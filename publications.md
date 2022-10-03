@@ -48,6 +48,12 @@ generation sequencing." Microbial Genomics 8(3).
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Elizabeth L. Geary, Patricia M. Oba, Catherine C. Applegate, Lindsay V. Clark,
+Christopher J. Fields, and Kelly S. Swanson (2022) "Effect of a mildly cooked
+human-grade dog diet on gene expression, skin and coat health measures, and fecal
+microbiota of healthy adult dogs." Journal of Animal Science 100(10): 1-15.
+[doi:10.1093/jas/skac265](https://doi.org/10.1093/jas/skac265)
+
 Colin Lim, Tristan X. McCallister, Christian Saporito-Magriña, Garrett D.
 McPheron, Ramya Krishnan, M. Alejandra Zeballos C., Jackson E. Powell,
 Lindsay V. Clark, Pablo Perez-Pinera, and Thomas Gaj (2022) "CRISPR base editing
