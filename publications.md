@@ -35,8 +35,8 @@ microsatellite analysis." Molecular Ecology Resources 11(3): 562-566.
 
 Jean-Tristan Brandenburg, Lindsay Clark, Gerrit Botha, Sumir Panji, Shakuntala
 Baichoo, Christopher Fields, Scott Hazelhurst (2022) "H3AGWAS: A portable
-workflow for genome-wide association studies." Preprint on bioRxiv.
-[doi:10.1101/2022.05.02.490206](https://doi.org/10.1101/2022.05.02.490206)
+workflow for genome-wide association studies." BMC Bioinformatics 23: 498.
+[doi:10.1186/s12859-022-05034-w](https://doi.org/10.1186/s12859-022-05034-w)
 
 Lavanya Singh, James Emmanuel San, Houriiyah Tegally, Pius M. Brzoska, Ugochukwu
 J. Anyaneji, Eduan Wilkinson, Lindsay Clark, Jennifer Giandhari,
