@@ -48,6 +48,12 @@ generation sequencing." Microbial Genomics 8(3).
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Jeremy M. Bingen, Lindsay V. Clark, Mark R. Band, Ilyas Munzier, and Michael
+Carrithers (2023) "Differential DNA methylation associated with multiple sclerosis
+and disease modifying treatments in an underrepresented minority population."
+Frontiers in Genetics 13.
+[doi:10.3389/fgene.2022.1058817](https://doi.org/10.3389/fgene.2022.1058817)
+
 Elizabeth L. Geary, Patricia M. Oba, Catherine C. Applegate, Lindsay V. Clark,
 Christopher J. Fields, and Kelly S. Swanson (2022) "Effect of a mildly cooked
 human-grade dog diet on gene expression, skin and coat health measures, and fecal
