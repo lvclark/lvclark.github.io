@@ -48,6 +48,13 @@ generation sequencing." Microbial Genomics 8(3).
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Sean T. Bresnahan, Ellen Lee, Lindsay V. Clark, Rong Ma, Juliana Rangel,
+Christina M. Grozinger, and Hongmei Li-Byarlay (2023) "Examining
+parent-of-origin effects on transcription and RNA methylation in mediating
+aggressive behavior in honey bees (_Apis mellifera_)."
+Research Square (preprint).
+[doi:10.21203/rs.3.rs-2621698/v1](https://doi.org/10.21203/rs.3.rs-2621698/v1)
+
 Jeremy M. Bingen, Lindsay V. Clark, Mark R. Band, Ilyas Munzier, and Michael
 Carrithers (2023) "Differential DNA methylation associated with multiple sclerosis
 and disease modifying treatments in an underrepresented minority population."
@@ -161,6 +168,16 @@ Annals of Botany 114(1):97-107.
 [doi:10.1093/aob/mcu084](https://doi.org/10.1093/aob/mcu084)
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
+
+Joyce N. Njuguna, Lindsay V. Clark, Kossonou G. Anzoua, Larisa Bagmet,
+Pavel Chebukin, Maria S. Dwiyanti, Elena Dzyubenko, Nicolay Dzyubenko,
+Bimal Kumar Ghimire, Xiaoli Jin, Douglas A. Johnson, Uffe Jørgensen,
+Jens Bonderup Kjeldsen, Hironori Nagano, Junhua Peng, Karen Koefoed Petersen,
+Andrey Sabitov, Eun Soo Seong, Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu,
+Hua Zhao, Stephen P. Long, and Erik J. Sacks (2023) "Biomass yield in a
+genetically diverse _Miscanthus sacchariflorus_ germplasm panel phenotyped at
+five locations in Asia, North America and Europe." GCB Bioenergy.
+[doi:10.1111/GCBB.13043](https://doi.org/10.1111/GCBB.13043)
 
 Zhihui Guo, Meilan Xu, Hironori Nagano, Lindsay V. Clark, Erik J. Sacks,
 and Toshihiko Yamada (2021) "Characterization of the _Ghd8_ Flowering Time Gene
