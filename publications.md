@@ -285,7 +285,7 @@ Yield, Yield Components, and Genotype × Environment Interactions."
 Crop Science 55(5):1978-1994.
 [doi:10.2135/cropsci2014.12.0808](https://doi.org/10.2135/cropsci2014.12.0808)
 
-### Blackberry and Grape
+### Blackberry, Grape, Rice
 
 Lindsay V. Clark, Katherine J. Evans, and Marie Jasieniuk (2013) "Origins and
 distribution of invasive *Rubus fruticosus* L. agg. (Rosaceae) clones in the
@@ -299,6 +299,12 @@ apomixis and by sexual recombination." Heredity 109(5):320-328.
 [doi:10.1038/hdy.2012.45](https://doi.org/10.1038/hdy.2012.45)
 Datasets and R scripts: [doi:10.5061/dryad.m466f](https://doi.org/10.5061/dryad.m466f)
 Cited in the Flora of North America
+
+Sandeep A. Sakhale, Shailesh Yadav, Lindsay V. Clark, Alexander E. Lipka,
+Arvind Kumar, and Erik J. Sacks (2023) "Genome-wide association analysis for emergence
+pf deeply sown rice (Oryza sativa) reveals novel aus-specific phytohormone candidate
+genes for adaptation to dry-direct seeding in the field." Frontiers in Plant Science 14.
+[doi:10.3389/fpls.2023.1172816](https://doi.org/10.3389/fpls.2023.1172816)
 
 Amanda Garris, Lindsay Clark, Chris Owens, Steven McKay, James Luby,
 Kathy Mathiason, and Anne Fennell (2009) "Mapping of Photoperiod-Induced Growth
