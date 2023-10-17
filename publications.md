@@ -33,6 +33,14 @@ Lindsay V. Clark and Marie Jasieniuk (2011) "POLYSAT: an R package for polyploid
 microsatellite analysis." Molecular Ecology Resources 11(3): 562-566.
 [doi:10.1111/j.1755-0998.2011.02985.x](https://doi.org/10.1111/j.1755-0998.2011.02985.x)
 
+Joyce N. Njuguna, Lindsay V. Clark, Alexander E. Lipka, Kossonou G. Anzoua, Larisa Bagmet,
+Pavel Chebukin, Maria S. Dwiyanti, Elena Dzyubenko, Nicolay Dzyubenko, Bimal Kumar Ghimire,
+Xiaoli Jin, Douglas A. Johnson, Jens Bonderup Kjeldsen, Hironori Nagano,
+Ivone de Bem Oliveira, Junhua Peng1, Karen Koefoed Petersen1, Andrey Sabitov, Eun Soo Seong,
+Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu, Hua Zhao, Patricio Munoz, Stephen P. Long, and
+Erik J. Sacks (2023)  "Impact of genotype-calling methodologies on genome-wide association and
+genomic prediction in polyploids." The Plant Genome.
+
 Jean-Tristan Brandenburg, Lindsay Clark, Gerrit Botha, Sumir Panji, Shakuntala
 Baichoo, Christopher Fields, Scott Hazelhurst (2022) "H3AGWAS: A portable
 workflow for genome-wide association studies." BMC Bioinformatics 23: 498.
@@ -169,6 +177,15 @@ Annals of Botany 114(1):97-107.
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
 
+Joyce N. Njuguna, Lindsay V. Clark, Alexander E. Lipka, Kossonou G. Anzoua,
+Larisa Bagmet, Pavel Chebukin, Maria S. Dwiyanti, Elena Dzyubenko, Nicolay Dzyubenko,
+Bimal Kumar Ghimire, Xiaoli Jin, Douglas A. Johnson, Hironori Nagano, Junhua Peng,
+Karen Koefoed Petersen, Andrey Sabitov, Eun Soo Seong, Toshihiko Yamada, Ji Hye Yoo,
+Chang Yeon Yu, Hua Zhao, Stephen P. Long, and Erik J. Sacks (2023)
+"Genome-wide association and genomic prediction for yield and component traits of
+_Miscanthus sacchariflorus_." GCB Bioenergy 15(11):1355-1372.
+[doi:10.1111/gcbb.13097](https://doi.org/10.1111/gcbb.13097)
+
 Joyce N. Njuguna, Lindsay V. Clark, Kossonou G. Anzoua, Larisa Bagmet,
 Pavel Chebukin, Maria S. Dwiyanti, Elena Dzyubenko, Nicolay Dzyubenko,
 Bimal Kumar Ghimire, Xiaoli Jin, Douglas A. Johnson, Uffe Jørgensen,
@@ -176,7 +193,7 @@ Jens Bonderup Kjeldsen, Hironori Nagano, Junhua Peng, Karen Koefoed Petersen,
 Andrey Sabitov, Eun Soo Seong, Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu,
 Hua Zhao, Stephen P. Long, and Erik J. Sacks (2023) "Biomass yield in a
 genetically diverse _Miscanthus sacchariflorus_ germplasm panel phenotyped at
-five locations in Asia, North America and Europe." GCB Bioenergy.
+five locations in Asia, North America and Europe." GCB Bioenergy 15(5):642-662.
 [doi:10.1111/GCBB.13043](https://doi.org/10.1111/GCBB.13043)
 
 Zhihui Guo, Meilan Xu, Hironori Nagano, Lindsay V. Clark, Erik J. Sacks,
@@ -299,6 +316,12 @@ apomixis and by sexual recombination." Heredity 109(5):320-328.
 [doi:10.1038/hdy.2012.45](https://doi.org/10.1038/hdy.2012.45)
 Datasets and R scripts: [doi:10.5061/dryad.m466f](https://doi.org/10.5061/dryad.m466f)
 Cited in the Flora of North America
+
+Marlee R. Labroo, Lindsay V. Clark, Shilai Zhang, Fengyi Hu, Dayun Tao,
+Ruaraidh Sackville Hamilton, and Erik J. Sacks (2023) "Solving the mystery of Obake
+rice in Africa: Population structure analyses of _Oryza longistaminata _reveal three
+genetic groups and evidence of both recent and ancient introgression with _O. sativa_."
+Frontiers in Plant Science.
 
 Sandeep A. Sakhale, Shailesh Yadav, Lindsay V. Clark, Alexander E. Lipka,
 Arvind Kumar, and Erik J. Sacks (2023) "Genome-wide association analysis for emergence
