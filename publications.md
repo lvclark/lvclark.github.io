@@ -319,7 +319,7 @@ Cited in the Flora of North America
 
 Marlee R. Labroo, Lindsay V. Clark, Shilai Zhang, Fengyi Hu, Dayun Tao,
 Ruaraidh Sackville Hamilton, and Erik J. Sacks (2023) "Solving the mystery of Obake
-rice in Africa: Population structure analyses of _Oryza longistaminata _reveal three
+rice in Africa: Population structure analyses of _Oryza longistaminata_ reveal three
 genetic groups and evidence of both recent and ancient introgression with _O. sativa_."
 Frontiers in Plant Science.
 
