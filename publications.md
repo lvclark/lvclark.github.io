@@ -40,6 +40,7 @@ Ivone de Bem Oliveira, Junhua Peng1, Karen Koefoed Petersen1, Andrey Sabitov, Eu
 Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu, Hua Zhao, Patricio Munoz, Stephen P. Long, and
 Erik J. Sacks (2023)  "Impact of genotype-calling methodologies on genome-wide association and
 genomic prediction in polyploids." The Plant Genome.
+[doi:10.1002/tpg2.20401](http://doi.org/10.1002/tpg2.20401)
 
 Jean-Tristan Brandenburg, Lindsay Clark, Gerrit Botha, Sumir Panji, Shakuntala
 Baichoo, Christopher Fields, Scott Hazelhurst (2022) "H3AGWAS: A portable
