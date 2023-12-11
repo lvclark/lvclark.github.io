@@ -178,6 +178,15 @@ Annals of Botany 114(1):97-107.
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
 
+Sarah Widener, Joyce N. Njuguna, Lindsay V. Clark, Kossonou G. Anzoua, Larisa Bagmet,
+Pavel Chebukin, Maria S. Dwiyanti, Elena Dzyubenko, Nicolay Dzyubenko, Bimal Kumar Ghimire,
+Xiaoli Jin, Uffe Jørgensen, Jens Bonderup Kjeldsen, Hironori Nagano, Junhua Peng,
+Karen Koefoed Petersen, Andrey Sabitov, Eun Soo Seong, Toshihiko Yamada, Ji Hye Yoo,
+Chang Yeon Yu, Hua Zhao, Diego Jarquin, Erik Sacks, and Alexander E. Lipka (2024)
+"Genotype by environment model predictive ability in _Miscanthus_."
+GCB Bioenergy 16(1):e13113.
+[doi:10.1111/gcbb.13113](https://doi.org/10.1111/gcbb.13113)
+
 Joyce N. Njuguna, Lindsay V. Clark, Alexander E. Lipka, Kossonou G. Anzoua,
 Larisa Bagmet, Pavel Chebukin, Maria S. Dwiyanti, Elena Dzyubenko, Nicolay Dzyubenko,
 Bimal Kumar Ghimire, Xiaoli Jin, Douglas A. Johnson, Hironori Nagano, Junhua Peng,
