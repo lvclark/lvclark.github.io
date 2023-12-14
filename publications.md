@@ -57,6 +57,12 @@ generation sequencing." Microbial Genomics 8(3).
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Paterne A. Agre, Lindsay V. Clark, Ana Luisa Garcia-Oliveira, Rajaguru Bohar,
+Patrick Adebola, Robert Asiedu, Ryohei Terauchi, and Asrat Asfaw (2024)
+"Identification of diagnostic KASP-SNP markers for routine breeding activities in
+yam (_Dioscorea_ spp.)." The Plant Genome.
+[doi:10.1002/tpg2.20419](https://doi.org/10.1002/tpg2.20419)
+
 Sean T. Bresnahan, Ellen Lee, Lindsay V. Clark, Rong Ma, Juliana Rangel,
 Christina M. Grozinger, and Hongmei Li-Byarlay (2023) "Examining
 parent-of-origin effects on transcription and RNA methylation in mediating
