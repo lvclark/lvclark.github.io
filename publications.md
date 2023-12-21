@@ -39,7 +39,7 @@ Xiaoli Jin, Douglas A. Johnson, Jens Bonderup Kjeldsen, Hironori Nagano,
 Ivone de Bem Oliveira, Junhua Peng1, Karen Koefoed Petersen1, Andrey Sabitov, Eun Soo Seong,
 Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu, Hua Zhao, Patricio Munoz, Stephen P. Long, and
 Erik J. Sacks (2023)  "Impact of genotype-calling methodologies on genome-wide association and
-genomic prediction in polyploids." The Plant Genome.
+genomic prediction in polyploids." The Plant Genome 16(4): e20401.
 [doi:10.1002/tpg2.20401](http://doi.org/10.1002/tpg2.20401)
 
 Jean-Tristan Brandenburg, Lindsay Clark, Gerrit Botha, Sumir Panji, Shakuntala
