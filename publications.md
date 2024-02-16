@@ -36,7 +36,7 @@ microsatellite analysis." Molecular Ecology Resources 11(3): 562-566.
 Joyce N. Njuguna, Lindsay V. Clark, Alexander E. Lipka, Kossonou G. Anzoua, Larisa Bagmet,
 Pavel Chebukin, Maria S. Dwiyanti, Elena Dzyubenko, Nicolay Dzyubenko, Bimal Kumar Ghimire,
 Xiaoli Jin, Douglas A. Johnson, Jens Bonderup Kjeldsen, Hironori Nagano,
-Ivone de Bem Oliveira, Junhua Peng1, Karen Koefoed Petersen1, Andrey Sabitov, Eun Soo Seong,
+Ivone de Bem Oliveira, Junhua Peng, Karen Koefoed Petersen, Andrey Sabitov, Eun Soo Seong,
 Toshihiko Yamada, Ji Hye Yoo, Chang Yeon Yu, Hua Zhao, Patricio Munoz, Stephen P. Long, and
 Erik J. Sacks (2023)  "Impact of genotype-calling methodologies on genome-wide association and
 genomic prediction in polyploids." The Plant Genome 16(4): e20401.
@@ -67,8 +67,8 @@ Sean T. Bresnahan, Ellen Lee, Lindsay V. Clark, Rong Ma, Juliana Rangel,
 Christina M. Grozinger, and Hongmei Li-Byarlay (2023) "Examining
 parent-of-origin effects on transcription and RNA methylation in mediating
 aggressive behavior in honey bees (_Apis mellifera_)."
-Research Square (preprint).
-[doi:10.21203/rs.3.rs-2621698/v1](https://doi.org/10.21203/rs.3.rs-2621698/v1)
+BMC Genomics 24: 315.
+[doi:s12864-023-09411-4](https://doi.org/10.1186/s12864-023-09411-4)
 
 Jeremy M. Bingen, Lindsay V. Clark, Mark R. Band, Ilyas Munzier, and Michael
 Carrithers (2023) "Differential DNA methylation associated with multiple sclerosis
