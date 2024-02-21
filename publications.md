@@ -68,7 +68,7 @@ Christina M. Grozinger, and Hongmei Li-Byarlay (2023) "Examining
 parent-of-origin effects on transcription and RNA methylation in mediating
 aggressive behavior in honey bees (_Apis mellifera_)."
 BMC Genomics 24: 315.
-[doi:s12864-023-09411-4](https://doi.org/10.1186/s12864-023-09411-4)
+[doi:10.1186/s12864-023-09411-4](https://doi.org/10.1186/s12864-023-09411-4)
 
 Jeremy M. Bingen, Lindsay V. Clark, Mark R. Band, Ilyas Munzier, and Michael
 Carrithers (2023) "Differential DNA methylation associated with multiple sclerosis
