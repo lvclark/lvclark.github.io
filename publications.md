@@ -337,11 +337,11 @@ Marlee R. Labroo, Lindsay V. Clark, Shilai Zhang, Fengyi Hu, Dayun Tao,
 Ruaraidh Sackville Hamilton, and Erik J. Sacks (2023) "Solving the mystery of Obake
 rice in Africa: Population structure analyses of _Oryza longistaminata_ reveal three
 genetic groups and evidence of both recent and ancient introgression with _O. sativa_."
-Frontiers in Plant Science.
+Frontiers in Plant Science 14. [fpls.2023.1278196](https://doi.org/10.3389/fpls.2023.1278196)
 
 Sandeep A. Sakhale, Shailesh Yadav, Lindsay V. Clark, Alexander E. Lipka,
 Arvind Kumar, and Erik J. Sacks (2023) "Genome-wide association analysis for emergence
-pf deeply sown rice (Oryza sativa) reveals novel aus-specific phytohormone candidate
+pf deeply sown rice (_Oryza sativa_) reveals novel aus-specific phytohormone candidate
 genes for adaptation to dry-direct seeding in the field." Frontiers in Plant Science 14.
 [doi:10.3389/fpls.2023.1172816](https://doi.org/10.3389/fpls.2023.1172816)
 
