@@ -197,6 +197,11 @@ Annals of Botany 114(1):97-107.
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
 
+Nicholas R. LaBonte, Dessireé P. Zerpa-Catanho, Siyao Liu, Liang Xiao, Hongxu Dong,
+Lindsay V. Clark, and Erik J. Sacks (2024) "Improving precision and accuracy of genetic
+mapping with genotyping-by-sequencing data in outcrossing species." GCB Bioenergy 16(7):e13167.
+[doi:10.1111/gcbb.13167](https://doi.org/10.1111/gcbb.13167)
+
 Sarah Widener, Joyce N. Njuguna, Lindsay V. Clark, Kossonou G. Anzoua, Larisa Bagmet,
 Pavel Chebukin, Maria S. Dwiyanti, Elena Dzyubenko, Nicolay Dzyubenko, Bimal Kumar Ghimire,
 Xiaoli Jin, Uffe Jørgensen, Jens Bonderup Kjeldsen, Hironori Nagano, Junhua Peng,
