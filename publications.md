@@ -62,7 +62,7 @@ Lely A. Quina, Juan M. Lavista Ferres, David Jardine, Elisabeth A. Haas, Tatiana
 Chelsea M Pagan, Avni Santani, Diego Martinez, Soumitra Barua, Zakkary McNutt,
 Addie Nesbitt, Ed Mitchell, Jan-Marino Ramirez (in press) "Known pathogenic gene variants
 and new candidates detected in Sudden Unexpected Infant Death (SUID) using Whole Genome
-Sequencing (WGS)." American Journal of Medical Genetics Part A.
+Sequencing (WGS)." American Journal of Medical Genetics Part A. [doi:10.1002/ajmg.a.63596](http://doi.org/10.1002/ajmg.a.63596)
 
 Weston T. Powell, Lindsay V. Clark, Lucille M. Rich, Elizabeth R. Vanderwall, Camille Gates,
 Maria P. White, and Jason S. Debley (in press) "Altered circadian gene expression in primary
