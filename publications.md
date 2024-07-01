@@ -73,7 +73,7 @@ human airway epithelial cells in asthma." ERJ Open Research.
 Paterne A. Agre, Lindsay V. Clark, Ana Luisa Garcia-Oliveira, Rajaguru Bohar,
 Patrick Adebola, Robert Asiedu, Ryohei Terauchi, and Asrat Asfaw (2024)
 "Identification of diagnostic KASP-SNP markers for routine breeding activities in
-yam (_Dioscorea_ spp.)." The Plant Genome.
+yam (_Dioscorea_ spp.)." The Plant Genome 17(2): e20419.
 [doi:10.1002/tpg2.20419](https://doi.org/10.1002/tpg2.20419)
 
 Sean T. Bresnahan, Ellen Lee, Lindsay V. Clark, Rong Ma, Juliana Rangel,
