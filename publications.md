@@ -71,9 +71,10 @@ human airway epithelial cells in asthma." ERJ Open Research.
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
-Rebecca C. Bishop, Ann M. Kemper, Lindsay V. Clark, Pamela A. Wilkins, and Annete M. McCoy (in press)
+Rebecca C. Bishop, Ann M. Kemper, Lindsay V. Clark, Pamela A. Wilkins, and Annete M. McCoy (2024)
 "Stability of gastric fluid and fecal microbial populations in healthy horses under pasture and stable conditions."
-Animals.
+Animals 14(20): 2979.
+[doi:10.3390/ani14202979](https://doi.org/10.3390/ani14202979)
 
 Paterne A. Agre, Lindsay V. Clark, Ana Luisa Garcia-Oliveira, Rajaguru Bohar,
 Patrick Adebola, Robert Asiedu, Ryohei Terauchi, and Asrat Asfaw (2024)
