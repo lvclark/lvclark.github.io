@@ -66,8 +66,9 @@ Sequencing (WGS)." American Journal of Medical Genetics Part A 194(11): e63596.
 [doi:10.1002/ajmg.a.63596](http://doi.org/10.1002/ajmg.a.63596)
 
 Weston T. Powell, Lindsay V. Clark, Lucille M. Rich, Elizabeth R. Vanderwall, Camille Gates,
-Maria P. White, and Jason S. Debley (in press) "Altered circadian gene expression in primary
-human airway epithelial cells in asthma." ERJ Open Research.
+Maria P. White, and Jason S. Debley (2024) "Altered circadian gene expression in primary
+human airway epithelial cells in asthma." ERJ Open Research 10(4): 00005-2024.
+[doi:10.1183/23120541.00005-2024](https://doi.org/10.1183/23120541.00005-2024)
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
