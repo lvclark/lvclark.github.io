@@ -72,6 +72,10 @@ human airway epithelial cells in asthma." ERJ Open Research 10(4): 00005-2024.
 
 ### HPCBio projects, Roy J. Carver Biotechnology Center
 
+Ivan Sosa Marquez, Karla Griesbaum, Lindsay Clark, Elizabeth Ainsworth, Natalie Christian,
+and Katie Heath (2025) "Dominant foliar endophytes influence soybean yield and transcriptome."
+FEMS Microbiology Ecology (in press)
+
 Rebecca C. Bishop, Ann M. Kemper, Lindsay V. Clark, Pamela A. Wilkins, and Annete M. McCoy (2024)
 "Stability of gastric fluid and fecal microbial populations in healthy horses under pasture and stable conditions."
 Animals 14(20): 2979.
