@@ -57,6 +57,11 @@ generation sequencing." Microbial Genomics 8(3).
 
 ### Seattle Children's Research Institute
 
+Santiago P. Fregoso, Manith Atapattu, LuLu Callies, Deja Monet, Amy Leonardson, Lindsay Clark,
+Stella Xu, Timothy Joel Cherry (2025) "Loss of miR-9-2 Causes Cerebral Hemorrhage and
+Hydrocephalus by Widespread Disruption of Cell-Type-Specific Neurodevelopmental Gene Networks."
+bioRxiv [doi:10.1101/2025.07.31.668014](https://doi.org/10.1101/2025.07.31.668014)
+
 Angela M. Bard, Lindsay V. Clark, Erdal Cosgun, Kimberly A. Aldinger, Andrew Timms,
 Lely A. Quina, Juan M. Lavista Ferres, David Jardine, Elisabeth A. Haas, Tatiana M Becker,
 Chelsea M Pagan, Avni Santani, Diego Martinez, Soumitra Barua, Zakkary McNutt,
