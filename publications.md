@@ -57,6 +57,10 @@ generation sequencing." Microbial Genomics 8(3).
 
 ### Seattle Children's Research Institute
 
+Christoph Grundner, Vishant Boradia, Junxi Chen, Andrew Frando, Lindsay Clark (2026)
+"PE/PPE proteins contribute to _Mycobacterium tuberculosis_ drug resistance."
+Nature Communications (in press).
+
 Santiago P. Fregoso, Manith Atapattu, LuLu Callies, Deja Monet, Amy Leonardson, Lindsay Clark,
 Stella Xu, Timothy Joel Cherry (2025) "Loss of miR-9-2 Causes Cerebral Hemorrhage and
 Hydrocephalus by Widespread Disruption of Cell-Type-Specific Neurodevelopmental Gene Networks."
