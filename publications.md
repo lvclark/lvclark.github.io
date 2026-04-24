@@ -60,6 +60,7 @@ generation sequencing." Microbial Genomics 8(3).
 Christoph Grundner, Vishant Boradia, Junxi Chen, Andrew Frando, Lindsay Clark (2026)
 "PE/PPE proteins contribute to _Mycobacterium tuberculosis_ drug resistance."
 Nature Communications (in press).
+[doi:10.1038/s41467-026-72431-7](https://doi.org/10.1038/s41467-026-72431-7)
 
 Santiago P. Fregoso, Manith Atapattu, LuLu Callies, Deja Monet, Amy Leonardson, Lindsay Clark,
 Stella Xu, Timothy Joel Cherry (2025) "Loss of miR-9-2 Causes Cerebral Hemorrhage and
