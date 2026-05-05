@@ -57,7 +57,7 @@ generation sequencing." Microbial Genomics 8(3).
 
 ### Seattle Children's Research Institute
 
-Christoph Grundner, Vishant Boradia, Junxi Chen, Andrew Frando, Lindsay Clark (2026)
+Vishant Boradia, Junxi Chen, Andrew Frando, Lindsay Clark, Christoph Grundner (2026)
 "PE/PPE proteins contribute to _Mycobacterium tuberculosis_ drug resistance."
 Nature Communications (in press).
 [doi:10.1038/s41467-026-72431-7](https://doi.org/10.1038/s41467-026-72431-7)
