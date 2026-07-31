@@ -57,9 +57,15 @@ generation sequencing." Microbial Genomics 8(3).
 
 ### Seattle Children's Research Institute
 
+Katelyn Burleigh, Neerja Katiyar, Lindsay V. Clark, Kelly Stratton, Kobe Ikegami,
+Michael Jensen, Camille Keenan, Bobbie-Jo Webb-Robertson, Gang Huang, Scott N. Furlan,
+Colleen Annesley, Rebecca A. Gardner, and Heather H. Gustafson (2026) "A dysfunctional
+IL-10-producing memory CD8+ T cell population is associated with severe CAR-T neurotoxicity."
+Blood Immunology & Cellular Therapy (in press).
+
 Vishant Boradia, Junxi Chen, Andrew Frando, Lindsay Clark, Christoph Grundner (2026)
 "PE/PPE proteins contribute to _Mycobacterium tuberculosis_ drug resistance."
-Nature Communications (in press).
+Nature Communications 17: 5668.
 [doi:10.1038/s41467-026-72431-7](https://doi.org/10.1038/s41467-026-72431-7)
 
 Santiago P. Fregoso, Manith Atapattu, LuLu Callies, Deja Monet, Amy Leonardson, Lindsay Clark,
@@ -217,6 +223,16 @@ Annals of Botany 114(1):97-107.
 [doi:10.1093/aob/mcu084](https://doi.org/10.1093/aob/mcu084)
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
+
+Shatabdi Proma, Garcia-Abadillo Julian, Vitor Sagae, Erik Sacks, Andrew D. B. Leakey,
+Hua Zhao, Bimal Kumar Ghimere, Alexander E. Lipka, Joyce N. Njuguna, Chang Yeon Yu,
+Eun Soo Seong, Ji Hye Yoo, Hironori Nagano, Kossonou G. Anzoua, Toshihiko Yamada,
+Pavel Chebukin, Xiaoli Jin, Lindsay V. Clark, Karen Koefoed Petersen, Junhua Peng,
+Andrey Sabitov, Elene Dzyubenko, Nicolay Dzyubenko, Katarzyna Glowacka, Moyses Nascimento,
+Ana Carolina Campana Nascimento, Maria S. Dwiyanti, Larisa Bagment, Ansari Shaik, and
+Diego Jarquin (2026) "Multi-trait multi-environment genomic prediction strategies for
+_Miscanthus sacchariflorus_." Frontiers in Plant Science 17.
+[doi:10.3389/fpls.2026.1835247](https://doi.org/10.3389/fpls.2026.1835247)
 
 Nicholas R. LaBonte, Dessireé P. Zerpa-Catanho, Siyao Liu, Liang Xiao, Hongxu Dong,
 Lindsay V. Clark, and Erik J. Sacks (2024) "Improving precision and accuracy of genetic
