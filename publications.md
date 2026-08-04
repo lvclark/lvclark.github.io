@@ -224,6 +224,16 @@ Annals of Botany 114(1):97-107.
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
 
+Shatabdi Proma, Nelson Lubanga, Erik Sacks, Andrew D. B. Leakey,
+Hua Zhao, Bimal Kumar Ghimere, Alexander E. Lipka, Joyce N. Njuguna, Chang Yeon Yu,
+Eun Soo Seong, Ji Hye Yoo, Hironori Nagano, Kossonou G. Anzoua, Toshihiko Yamada,
+Pavel Chebukin, Xiaoli Jin, Lindsay V. Clark, Karen Koefoed Petersen, Junhua Peng,
+Andrey Sabitov, Elene Dzyubenko, Nicolay Dzyubenko, Katarzyna Glowacka, Moyses Nascimento,
+Ana Carolina Campana Nascimento, Maria S. Dwiyanti, Larisa Bagment, Ansari Shaik, Julian Garcia-Abadillo,
+and Diego Jarquin (2026) "Optimizing resource allocation in _Miscanthus_ breeding via sparse
+testing designs for genomic prediction." Frontiers in Plant Science 17.
+[doi:10.3389/fpls.2026.1834912](https://doi.org/10.3389/fpls.2026.1834912)
+
 Shatabdi Proma, Garcia-Abadillo Julian, Vitor Sagae, Erik Sacks, Andrew D. B. Leakey,
 Hua Zhao, Bimal Kumar Ghimere, Alexander E. Lipka, Joyce N. Njuguna, Chang Yeon Yu,
 Eun Soo Seong, Ji Hye Yoo, Hironori Nagano, Kossonou G. Anzoua, Toshihiko Yamada,
