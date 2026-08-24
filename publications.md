@@ -224,6 +224,12 @@ Annals of Botany 114(1):97-107.
 [Datasets and R scripts](http://hdl.handle.net/2142/49963)
 [DNA Sequence data ](https://www.ncbi.nlm.nih.gov//bioproject/PRJNA207721)
 
+Xuying Zheng, Nick Labonte, Hongxu Dong, Shailendra Sharma, Katarzyna Glowacka,
+Justin Gifford, Lindsay V. Clark, John A. Juvik, Dessiree Zerpa Catanho,
+and Erik J. Sacks (2026) "Genetic Mapping for Winter-Hardiness in a
+_Miscanthus sacchariflorus_ x _M. sinensis_ (hardy x non-hardy) F2 Population."
+GCB Bioenergy (in press).
+
 Shatabdi Proma, Nelson Lubanga, Erik Sacks, Andrew D. B. Leakey,
 Hua Zhao, Bimal Kumar Ghimere, Alexander E. Lipka, Joyce N. Njuguna, Chang Yeon Yu,
 Eun Soo Seong, Ji Hye Yoo, Hironori Nagano, Kossonou G. Anzoua, Toshihiko Yamada,
