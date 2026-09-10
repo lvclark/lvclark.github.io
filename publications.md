@@ -228,7 +228,8 @@ Xuying Zheng, Nick Labonte, Hongxu Dong, Shailendra Sharma, Katarzyna Glowacka,
 Justin Gifford, Lindsay V. Clark, John A. Juvik, Dessiree Zerpa Catanho,
 and Erik J. Sacks (2026) "Genetic Mapping for Winter-Hardiness in a
 _Miscanthus sacchariflorus_ x _M. sinensis_ (hardy x non-hardy) F2 Population."
-GCB Bioenergy (in press).
+GCB Bioenergy 18(10): e70175.
+[doi:10.1111/gcbb.70175](https://doi.org/10.1111/gcbb.70175)
 
 Shatabdi Proma, Nelson Lubanga, Erik Sacks, Andrew D. B. Leakey,
 Hua Zhao, Bimal Kumar Ghimere, Alexander E. Lipka, Joyce N. Njuguna, Chang Yeon Yu,
