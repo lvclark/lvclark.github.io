@@ -61,7 +61,8 @@ Katelyn Burleigh, Neerja Katiyar, Lindsay V. Clark, Kelly Stratton, Kobe Ikegami
 Michael Jensen, Camille Keenan, Bobbie-Jo Webb-Robertson, Gang Huang, Scott N. Furlan,
 Colleen Annesley, Rebecca A. Gardner, and Heather H. Gustafson (2026) "A dysfunctional
 IL-10-producing memory CD8+ T cell population is associated with severe CAR-T neurotoxicity."
-Blood Immunology & Cellular Therapy (in press).
+Blood Immunology & Cellular Therapy 2(4):100082
+[doi:10.1016/j.bict.2026.100082](https://doi.org/10.1016/j.bict.2026.100082)
 
 Vishant Boradia, Junxi Chen, Andrew Frando, Lindsay Clark, Christoph Grundner (2026)
 "PE/PPE proteins contribute to _Mycobacterium tuberculosis_ drug resistance."
