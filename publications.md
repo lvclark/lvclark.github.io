@@ -70,9 +70,9 @@ Nature Communications 17: 5668.
 [doi:10.1038/s41467-026-72431-7](https://doi.org/10.1038/s41467-026-72431-7)
 
 Santiago P. Fregoso, Manith Atapattu, LuLu Callies, Deja Monet, Amy Leonardson, Lindsay Clark,
-Stella Xu, Timothy Joel Cherry (2025) "Loss of miR-9-2 Causes Cerebral Hemorrhage and
+Stella Xu, Timothy Joel Cherry (2026) "Loss of miR-9-2 Causes Cerebral Hemorrhage and
 Hydrocephalus by Widespread Disruption of Cell-Type-Specific Neurodevelopmental Gene Networks."
-bioRxiv [doi:10.1101/2025.07.31.668014](https://doi.org/10.1101/2025.07.31.668014)
+PLoS Genetics (in press).
 
 Angela M. Bard, Lindsay V. Clark, Erdal Cosgun, Kimberly A. Aldinger, Andrew Timms,
 Lely A. Quina, Juan M. Lavista Ferres, David Jardine, Elisabeth A. Haas, Tatiana M Becker,
